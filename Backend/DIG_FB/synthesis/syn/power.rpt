@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : DIG_FEEDBCK
+Version: K-2015.06
+Date   : Mon Jul 13 03:24:13 2026
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+DIG_FEEDBCK            tsmc13_wl20       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+DIG_FEEDBCK                               0.719    0.404 9.83e+06    1.133 100.0
+  U0_LMS (LMS_in_width4_K_width9_err_width20)
+                                          0.283    0.135 4.17e+06    0.422  37.3
+  U0_CNT_MMD (CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8)
+                                       3.64e-02 9.15e-02 5.45e+05    0.129  11.3
+  U0_DCW (CALC_DCW_DCW_WIDTH9_err_width20_K_width9)
+                                          0.278    0.112 4.25e+06    0.395  34.9
+  U0_DSM (DSM_1ST_ORDER_in_width20)       0.121 6.57e-02 8.68e+05    0.187  16.5
+1

@@ -1,0 +1,55 @@
+ 
+****************************************
+Report : area
+Design : DIG_FEEDBCK
+Version: K-2015.06
+Date   : Mon Jul 13 11:31:28 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FB/design_for_test/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          684
+Number of nets:                          1750
+Number of cells:                          978
+Number of combinational cells:            847
+Number of sequential cells:               119
+Number of macros/black boxes:               0
+Number of buf/inv:                        163
+Number of references:                      11
+
+Combinational area:              14118.046627
+Buf/Inv area:                     1201.410702
+Noncombinational area:            3778.383781
+Macro/Black Box area:                0.000000
+Net Interconnect area:          221667.783264
+
+Total cell area:                 17896.430408
+Total area:                     239564.213673
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------------------------------------------
+DIG_FEEDBCK                       17896.4304    100.0     56.4816     0.0000  0.0000  DIG_FEEDBCK
+U0_CNT_MMD                         1521.4731      8.5    300.0585  1221.4146  0.0000  CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8_test_1
+U0_DCW                             6568.3394     36.7     58.8350   378.8974  0.0000  CALC_DCW_DCW_WIDTH9_err_width20_K_width9_test_1
+U0_DCW/mult_15                     6130.6070     34.3   5799.9543     0.0000  0.0000  CALC_DCW_DCW_WIDTH9_err_width20_K_width9_DW02_mult_0
+U0_DCW/mult_15/FS_1                 330.6527      1.8    330.6527     0.0000  0.0000  CALC_DCW_DCW_WIDTH9_err_width20_K_width9_DW01_add_0
+U0_DSM                             2160.4213     12.1    210.6293  1350.8517  0.0000  DSM_1ST_ORDER_in_width20_test_1
+U0_DSM/add_29                       598.9403      3.3    598.9403     0.0000  0.0000  DSM_1ST_ORDER_in_width20_DW01_add_0
+U0_LMS                             7565.0043     42.3    357.7168   827.2201  0.0000  LMS_in_width4_K_width9_err_width20_test_1
+U0_LMS/add_51                      1094.3310      6.1   1094.3310     0.0000  0.0000  LMS_in_width4_K_width9_err_width20_DW01_add_0
+U0_LMS/mult_38                     5285.7364     29.5   4670.3223     0.0000  0.0000  LMS_in_width4_K_width9_err_width20_DW02_mult_0
+U0_LMS/mult_38/FS_1                 615.4141      3.4    615.4141     0.0000  0.0000  LMS_in_width4_K_width9_err_width20_DW01_add_1
+U0_RST                               11.7670      0.1     11.7670     0.0000  0.0000  mux2X1_0
+U0_clk                               12.9437      0.1     12.9437     0.0000  0.0000  mux2X1_1
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------------------------------------------
+Total                                                  14118.0466  3778.3838  0.0000
+
+1

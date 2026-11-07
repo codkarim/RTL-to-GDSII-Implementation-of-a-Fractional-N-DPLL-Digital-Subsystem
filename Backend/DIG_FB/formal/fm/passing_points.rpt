@@ -1,0 +1,366 @@
+**************************************************
+Report         : passing_points
+
+Reference      : Ref:/WORK/DIG_FEEDBCK
+Implementation : Imp:/WORK/DIG_FEEDBCK
+Version        : L-2016.03-SP1
+Date           : Mon Jul 13 05:05:32 2026
+**************************************************
+
+110 Passing compare points:
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[10]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[10]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[11]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[11]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[12]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[12]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[13]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[13]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[14]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[14]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[15]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[15]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[16]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[16]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[17]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[17]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[18]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[18]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[19]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[19]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[7]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[7]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[8]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[8]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[9]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/FRAC_IN_reg[9]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/INTEGER_IN_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[7]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_CNT_MMD/MMD_CNTRL_reg[7]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[7]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[7]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[8]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DCW/DCW_reg[8]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/DSM_out_reg
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/DSM_out_reg
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[10]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[10]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[11]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[11]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[12]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[12]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[13]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[13]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[14]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[14]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[15]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[15]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[16]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[16]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[17]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[17]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[18]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[18]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[19]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[19]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[7]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[7]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[8]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[8]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[9]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_SIGN_reg[9]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_reg[19]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_DSM/Q_ERR_reg[19]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[0]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[0]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[10]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[10]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[11]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[11]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[12]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[12]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[13]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[13]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[14]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[14]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[15]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[15]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[16]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[16]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[17]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[17]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[18]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[18]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[19]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[19]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[1]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[1]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[20]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[20]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[21]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[21]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[22]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[22]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[23]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[23]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[24]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[24]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[2]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[2]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[3]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[3]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[4]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[4]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[5]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[5]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[6]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[6]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[7]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[7]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[8]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[8]
+
+  Ref  DFF        Ref:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[9]
+  Impl DFF        Imp:/WORK/DIG_FEEDBCK/U0_LMS/CORR_OUT_reg[9]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[0]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[0]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[1]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[1]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[2]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[2]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[3]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[3]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[4]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[4]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[5]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[5]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[6]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[6]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[7]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[7]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/DCW[8]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/DCW[8]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/LMS_OV_FL
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/LMS_OV_FL
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/LMS_UN_FL
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/LMS_UN_FL
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[0]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[0]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[1]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[1]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[2]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[2]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[3]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[3]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[4]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[4]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[5]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[5]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[6]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[6]
+
+  Ref  Port       Ref:/WORK/DIG_FEEDBCK/MMD_CNTRL[7]
+  Impl Port       Imp:/WORK/DIG_FEEDBCK/MMD_CNTRL[7]
+
+ [BBNet: multiply-driven net
+  BBPin: black-box pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

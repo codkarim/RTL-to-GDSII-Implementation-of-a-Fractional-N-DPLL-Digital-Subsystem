@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : area
+Design : DIG_FEEDBCK
+Version: K-2015.06
+Date   : Thu Jul 16 21:35:58 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FB/design_for_test/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          281
+Number of nets:                          1626
+Number of cells:                         1221
+Number of combinational cells:           1124
+Number of sequential cells:                91
+Number of macros/black boxes:               0
+Number of buf/inv:                        240
+Number of references:                       7
+
+Combinational area:              10791.515790
+Buf/Inv area:                     1229.651521
+Noncombinational area:            3198.270561
+Macro/Black Box area:                0.000000
+Net Interconnect area:          280468.068420
+
+Total cell area:                 13989.786351
+Total area:                     294457.854771
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------------------------------------------
+DIG_FEEDBCK                       13989.7864    100.0      4.7068     0.0000  0.0000  DIG_FEEDBCK
+U0_CNT_MMD                         1532.0634     11.0    313.0022  1219.0612  0.0000  CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8_test_1
+U0_DCW                             5289.2666     37.8   4917.4294   371.8372  0.0000  CALC_DCW_DCW_WIDTH9_err_width20_K_width9_test_1
+U0_DSM                             1645.0266     11.8    895.4687   749.5579  0.0000  DSM_1ST_ORDER_in_width20_test_1
+U0_LMS                             5490.4822     39.2   4632.6679   857.8143  0.0000  LMS_in_width4_K_width9_err_width20_test_1
+U0_RST                               16.4738      0.1     16.4738     0.0000  0.0000  mux2X1_0
+U0_clk                               11.7670      0.1     11.7670     0.0000  0.0000  mux2X1_1
+--------------------------------  ----------  -------  ----------  ---------  ------  -----------------------------------------------------------------
+Total                                                  10791.5158  3198.2706  0.0000
+
+1

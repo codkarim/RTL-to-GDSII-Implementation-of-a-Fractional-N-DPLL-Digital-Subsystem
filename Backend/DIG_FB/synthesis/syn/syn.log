@@ -1,0 +1,760 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################### Define Top Module ############################
+set top_module DIG_FEEDBCK
+DIG_FEEDBCK
+##################### Define Working Library Directory ######################
+define_design_lib work -path ./work
+1
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries           #"
+#      #setting Design Libraries           #
+puts "###########################################"
+###########################################
+#Add the path of the libraries to the search_path variable
+lappend search_path /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells
+lappend search_path /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell libraries 
+set target_library [list $SSLIB $TTLIB $FFLIB]
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $SSLIB $TTLIB $FFLIB]  
+* scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+######################## Reading RTL Files #################################
+puts "###########################################"
+###########################################
+puts "#             Reading RTL Files           #"
+#             Reading RTL Files           #
+puts "###########################################"
+###########################################
+set file_sv sverilog
+sverilog
+analyze -format $file_sv DIG_FEEDBCK.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DIG_FEEDBCK.sv
+Presto compilation completed successfully.
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+analyze -format $file_sv CALC_DCW.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CALC_DCW.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_sv CNTRL_MMD.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CNTRL_MMD.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_sv DSM_1ST_ORDER.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv
+Presto compilation completed successfully.
+1
+analyze -format $file_sv LMS.sv
+Running PRESTO HDLC
+Compiling source file /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv
+Presto compilation completed successfully.
+1
+elaborate -lib work DIG_FEEDBCK
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'DIG_FEEDBCK'.
+Information: Building the design 'DSM_1ST_ORDER' instantiated from design 'DIG_FEEDBCK' with
+	the parameters "in_width=20". (HDL-193)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv:44: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv:38: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine DSM_1ST_ORDER_in_width20 line 33 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     DSM_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      Q_ERR_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Q_ERR_SIGN_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   Q_ERR_SIGN_reg    | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'CALC_DCW' instantiated from design 'DIG_FEEDBCK' with
+	the parameters "DCW_WIDTH=9,err_width=20,K_width=9". (HDL-193)
+
+Inferred memory devices in process
+	in routine CALC_DCW_DCW_WIDTH9_err_width20_K_width9 line 19 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CALC_DCW.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       DCW_reg       | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'CNTRL_MMD' instantiated from design 'DIG_FEEDBCK' with
+	the parameters "FCW_WIDTH=27,FRAC_WIDTH=20,INT_WIDTH=7,CNTRL_WIDTH=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8 line 15 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CNTRL_MMD.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   INTEGER_IN_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     FRAC_IN_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8 line 30 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CNTRL_MMD.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MMD_CNTRL_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'LMS' instantiated from design 'DIG_FEEDBCK' with
+	the parameters "in_width=4,K_width=9,err_width=20". (HDL-193)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:61: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:65: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:72: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine LMS_in_width4_K_width9_err_width20 line 43 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CORR_OUT_reg     | Flip-flop |  25   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+elaborate -lib work CALC_DCW
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine CALC_DCW line 19 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CALC_DCW.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       DCW_reg       | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'CALC_DCW'.
+1
+elaborate -lib work CNTRL_MMD
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine CNTRL_MMD line 15 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CNTRL_MMD.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   INTEGER_IN_reg    | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     FRAC_IN_reg     | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine CNTRL_MMD line 30 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/CNTRL_MMD.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MMD_CNTRL_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'CNTRL_MMD'.
+1
+elaborate -lib work DSM_1ST_ORDER
+Running PRESTO HDLC
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv:44: unsigned to signed assignment occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv:38: unsigned to signed assignment occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine DSM_1ST_ORDER line 33 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/DSM_1ST_ORDER.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     DSM_out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      Q_ERR_reg      | Flip-flop |  20   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   Q_ERR_SIGN_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|   Q_ERR_SIGN_reg    | Flip-flop |  19   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'DSM_1ST_ORDER'.
+1
+elaborate -lib work LMS
+Running PRESTO HDLC
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:61: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:65: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:69: signed to unsigned part selection occurs. (VER-318)
+Warning:  /home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv:72: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine LMS line 43 in file
+		'/home/IC/GRAD_PROJECT/DIG_FB/synthesis/rtl/LMS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    CORR_OUT_reg     | Flip-flop |  25   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'LMS'.
+1
+###################### Defining toplevel ###################################
+current_design $top_module
+Current design is 'DIG_FEEDBCK'.
+{DIG_FEEDBCK}
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## Liniking All The Design Parts ########"
+######## Liniking All The Design Parts ########
+puts "###############################################"
+###############################################
+link 
+
+  Linking design 'DIG_FEEDBCK'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /home/IC/GRAD_PROJECT/DIG_FB/synthesis/syn/DIG_FEEDBCK.db, etc
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+
+1
+#################### Liniking All The Design Parts #########################
+puts "###############################################"
+###############################################
+puts "######## checking design consistency ##########"
+######## checking design consistency ##########
+puts "###############################################"
+###############################################
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06
+Date:        Mon Jul 13 03:23:30 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                                7
+    Unloaded nets (LINT-2)                                          7
+--------------------------------------------------------------------------------
+
+Warning: In design 'CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8', cell 'B_0' does not drive any nets. (LINT-1)
+Warning: In design 'LMS_in_width4_K_width9_err_width20', cell 'C105' does not drive any nets. (LINT-1)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[0]' driven by pin 'U0_CNT_MMD/INTEGER_IN[0]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[1]' driven by pin 'U0_CNT_MMD/INTEGER_IN[1]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[2]' driven by pin 'U0_CNT_MMD/INTEGER_IN[2]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[3]' driven by pin 'U0_CNT_MMD/INTEGER_IN[3]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[4]' driven by pin 'U0_CNT_MMD/INTEGER_IN[4]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[5]' driven by pin 'U0_CNT_MMD/INTEGER_IN[5]' has no loads. (LINT-2)
+Warning: In design 'DIG_FEEDBCK', net 'INTEGER_IN[6]' driven by pin 'U0_CNT_MMD/INTEGER_IN[6]' has no loads. (LINT-2)
+1
+############################### Path groups ################################
+puts "###############################################"
+###############################################
+puts "################ Path groups ##################"
+################ Path groups ##################
+puts "###############################################"
+###############################################
+#used to arrange paths at timing(setup,hold).rpt
+group_path -name INREG -from [all_inputs]
+1
+group_path -name REGOUT -to [all_outputs]
+1
+group_path -name INOUT -from [all_inputs] -to [all_outputs]
+1
+#################### Define Design Constraints #########################
+puts "###############################################"
+###############################################
+puts "############ Design Constraints #### ##########"
+############ Design Constraints #### ##########
+puts "###############################################"
+###############################################
+source -echo ./cons.tcl
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+####################################################################################
+#########################################################
+#### Section 1 : Clock Definition ####
+#########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set	CLK_NAME     MASTER_CLK
+set	CLK_PER      10		
+set 	SETUP_SKEW   0.25
+set 	HOLD_SKEW    0.05
+set 	CLK_RISE     0.1
+set 	CLK_FALL     0.1	 
+create_clock -period $CLK_PER -name $CLK_NAME	-waveform "0 [expr $CLK_PER/2]" [get_ports FB_CLK]
+set_clock_uncertainty	-setup	$SETUP_SKEW	[get_clocks $CLK_NAME]
+set_clock_uncertainty	-hold	$HOLD_SKEW	[get_clocks $CLK_NAME]
+set_clock_transition	-rise	$CLK_RISE	[get_clocks $CLK_NAME]
+set_clock_transition	-fall	$CLK_FALL	[get_clocks $CLK_NAME]
+#Add dont_touch
+set_dont_touch_network  [get_clocks $CLK_NAME]
+#set_dont_touch_network [get_ports  RST]
+####################################################################################
+#########################################################
+#### Section 2 : set input/output delay on ports ####
+#########################################################
+####################################################################################
+set	in_delay   [expr 0.3 * $CLK_PER]
+set	out_delay  [expr 0.3 * $CLK_PER]
+#input_delay
+set_input_delay  $in_delay  -clock $CLK_NAME [get_ports {TDC_OUT FCW}]
+#output_delay
+set_output_delay $out_delay -clock $CLK_NAME [get_ports {LMS_OV_FL LMS_UN_FL MMD_CNTRL DCW}]
+####################################################################################
+#########################################################
+#### Section 3 : Driving cells ####
+#########################################################
+####################################################################################
+set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c [get_ports {TDC_OUT FCW}]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+####################################################################################
+#########################################################
+#### Section 4 : Output load ####
+#########################################################
+####################################################################################
+set_load 0.5 [get_ports {LMS_OV_FL LMS_UN_FL MMD_CNTRL DCW}]
+####################################################################################
+#########################################################
+#### Section 5 : Operating Condition ####
+#########################################################
+####################################################################################
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+set_operating_conditions    -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" 			    -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"		
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
+Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+####################################################################################
+#########################################################
+#### Section 6 : wireload Model ####
+#########################################################
+####################################################################################
+set_wire_load_model -name tsmc13_wl20 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+####################################################################################
+###################### Mapping and optimization ########################
+puts "###############################################"
+###############################################
+puts "########## Mapping & Optimization #############"
+########## Mapping & Optimization #############
+puts "###############################################"
+###############################################
+compile_ultra -no_auto_ungroup
+Warning: The -no_auto_ungroup switch with compile_ultra  will be obsolete in the next major release. Please use -no_autoungroup instead. (OPT-1309)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 9 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+  Loading target library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading target library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db.alib'
+Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db.alib'
+Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db.alib'
+Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design DIG_FEEDBCK has different process,
+voltage and temperatures parameters than the parameters at which target library 
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'DSM_1ST_ORDER_in_width20'
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[18]' is removed because it is merged to 'Q_ERR_SIGN_reg[18]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[17]' is removed because it is merged to 'Q_ERR_SIGN_reg[17]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[16]' is removed because it is merged to 'Q_ERR_SIGN_reg[16]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[15]' is removed because it is merged to 'Q_ERR_SIGN_reg[15]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[14]' is removed because it is merged to 'Q_ERR_SIGN_reg[14]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[13]' is removed because it is merged to 'Q_ERR_SIGN_reg[13]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[12]' is removed because it is merged to 'Q_ERR_SIGN_reg[12]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[11]' is removed because it is merged to 'Q_ERR_SIGN_reg[11]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[10]' is removed because it is merged to 'Q_ERR_SIGN_reg[10]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[9]' is removed because it is merged to 'Q_ERR_SIGN_reg[9]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[8]' is removed because it is merged to 'Q_ERR_SIGN_reg[8]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[7]' is removed because it is merged to 'Q_ERR_SIGN_reg[7]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[6]' is removed because it is merged to 'Q_ERR_SIGN_reg[6]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[5]' is removed because it is merged to 'Q_ERR_SIGN_reg[5]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[4]' is removed because it is merged to 'Q_ERR_SIGN_reg[4]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[3]' is removed because it is merged to 'Q_ERR_SIGN_reg[3]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[2]' is removed because it is merged to 'Q_ERR_SIGN_reg[2]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[1]' is removed because it is merged to 'Q_ERR_SIGN_reg[1]'. (OPT-1215)
+Information: In design 'DSM_1ST_ORDER_in_width20', the register 'Q_ERR_reg[0]' is removed because it is merged to 'Q_ERR_SIGN_reg[0]'. (OPT-1215)
+ Implement Synthetic for 'DSM_1ST_ORDER_in_width20'.
+  Processing 'LMS_in_width4_K_width9_err_width20'
+ Implement Synthetic for 'LMS_in_width4_K_width9_err_width20'.
+  Processing 'CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8'
+ Implement Synthetic for 'CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8'.
+Information: Added key list 'DesignWare' to design 'CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8'. (DDB-72)
+  Processing 'DIG_FEEDBCK'
+  Processing 'CALC_DCW_DCW_WIDTH9_err_width20_K_width9'
+ Implement Synthetic for 'CALC_DCW_DCW_WIDTH9_err_width20_K_width9'.
+Memory usage for J1 task 412 Mbytes -- main task 412 Mbytes.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1M' in the library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+Information: Added key list 'DesignWare' to design 'CALC_DCW_DCW_WIDTH9_err_width20_K_width9'. (DDB-72)
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Selecting critical implementations
+  Mapping 'DSM_1ST_ORDER_in_width20_DW01_add_0'
+  Mapping 'DSM_1ST_ORDER_in_width20_DW01_add_1'
+Information: Added key list 'DesignWare' to design 'LMS_in_width4_K_width9_err_width20'. (DDB-72)
+Information: Added key list 'DesignWare' to design 'DSM_1ST_ORDER_in_width20'. (DDB-72)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:24  274992.3      0.99       2.3     117.3                           12569464.0000
+    0:00:24  275179.4      0.00       0.0     108.3                           12846059.0000
+    0:00:24  275179.4      0.00       0.0     108.3                           12846059.0000
+    0:00:25  274685.7      0.00       0.0     106.5                           12825185.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:28  270636.2      0.00       0.0     104.5                           12280216.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+    0:00:28  269886.6      0.00       0.0     102.3                           11172658.0000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:29  269886.6      0.00       0.0     102.3                           11172658.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:29  270850.6      0.00       0.0       0.0                           11139699.0000
+    0:00:29  270850.6      0.00       0.0       0.0                           11139699.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:29  270850.6      0.00       0.0       0.0                           11139699.0000
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+    0:00:30  269901.5      0.00       0.0       0.0                           10451664.0000
+    0:00:30  269901.5      0.00       0.0       0.0                           10451664.0000
+    0:00:30  269901.5      0.00       0.0       0.0                           10451664.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:31  269899.2      0.00       0.0       0.1                           10448976.0000
+    0:00:32  268531.6      0.00       0.0       0.1                           10271976.0000
+    0:00:32  268531.6      0.00       0.0       0.1                           10271976.0000
+    0:00:32  268531.6      0.00       0.0       0.1                           10271976.0000
+    0:00:32  268531.6      0.00       0.0       0.1                           10271976.0000
+    0:00:33  268330.8      0.00       0.0       0.0                           10215273.0000
+    0:00:33  268330.8      0.00       0.0       0.0                           10215273.0000
+    0:00:33  268330.8      0.00       0.0       0.0                           10215273.0000
+    0:00:33  268330.8      0.00       0.0       0.0                           10215273.0000
+    0:00:33  268263.7      0.00       0.0       0.0                           10086228.0000
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+  Loading target library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading target library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#############################################################################
+# Write out Design after initial compile
+#############################################################################
+write_file -format verilog -hierarchy -output DIG_FEEDBCK_netlist.v
+Writing verilog file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/syn/DIG_FEEDBCK_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_file -format ddc	   -hierarchy -output DIG_FEEDBCK_netlist.ddc
+Writing ddc file 'DIG_FEEDBCK_netlist.ddc'.
+1
+write_sdc  -nosplit	   DIG_FEEDBCK_netlist.sdc
+1
+write_sdf  	   	   DIG_FEEDBCK_netlist.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/IC/GRAD_PROJECT/DIG_FB/synthesis/syn/DIG_FEEDBCK_netlist.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+################# reporting #######################
+report_area        -hierarchy  > area.rpt
+report_power       -hierarchy  > power.rpt
+report_clock 	   -attributes > clocks.rpt
+report_timing      -max_paths 100 -delay_type max > setup.rpt 
+report_timing      -max_paths 100 -delay_type min > hold.rpt 
+report_constraint  -all_violators > constraints.rpt
+################# starting graphical user interface #######################
+gui_start
+Current design is 'DIG_FEEDBCK'.
+#exit
+dc_shell> dc_shell> Current design is 'DIG_FEEDBCK'.
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/generic.sdb'
+dc_shell> exit
+
+Memory usage for main task 447 Mbytes.
+Memory usage for this session 447 Mbytes.
+CPU usage for this session 64 seconds ( 0.02 hours ).
+
+Thank you...

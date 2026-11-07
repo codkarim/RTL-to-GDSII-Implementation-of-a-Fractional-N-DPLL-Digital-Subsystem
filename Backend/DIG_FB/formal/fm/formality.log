@@ -1,0 +1,30 @@
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[6] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[5] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[4] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[3] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[2] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[1] is undriven.
+Info:  Net Imp:/WORK/CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8/INTEGER_IN[0] is undriven.
+guide_reg_merging 36 (Line: 189)  trivial merge
+guide_reg_merging 37 (Line: 194)  trivial merge
+guide_reg_merging 38 (Line: 199)  trivial merge
+guide_reg_merging 39 (Line: 204)  trivial merge
+guide_reg_merging 40 (Line: 209)  trivial merge
+guide_reg_merging 41 (Line: 214)  trivial merge
+guide_reg_merging 42 (Line: 219)  trivial merge
+guide_reg_merging 43 (Line: 224)  trivial merge
+guide_reg_merging 44 (Line: 229)  trivial merge
+guide_reg_merging 45 (Line: 234)  trivial merge
+guide_reg_merging 46 (Line: 239)  trivial merge
+guide_reg_merging 47 (Line: 244)  trivial merge
+guide_reg_merging 48 (Line: 249)  trivial merge
+guide_reg_merging 49 (Line: 254)  trivial merge
+guide_reg_merging 50 (Line: 259)  trivial merge
+guide_reg_merging 51 (Line: 264)  trivial merge
+guide_reg_merging 52 (Line: 269)  trivial merge
+guide_reg_merging 53 (Line: 274)  trivial merge
+guide_reg_merging 54 (Line: 279)  trivial merge
+Info:  Pre-verification of Ref:/WORK/LMS_in_width4_K_width9_err_width20/DP_OP_6J1_122_2730 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/CALC_DCW_DCW_WIDTH9_err_width20_K_width9/mult_x_1 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/LMS_in_width4_K_width9_err_width20/DP_OP_6J1_122_2730 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/CALC_DCW_DCW_WIDTH9_err_width20_K_width9/mult_x_1 SUCCEEDED.
