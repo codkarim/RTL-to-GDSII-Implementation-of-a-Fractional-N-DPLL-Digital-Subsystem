@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : DIG_FEEDFWD
+Version: K-2015.06
+Date   : Mon Jul 13 03:31:02 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FW/synthesis/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          106
+Number of nets:                           618
+Number of cells:                          493
+Number of combinational cells:            434
+Number of sequential cells:                57
+Number of macros/black boxes:               0
+Number of buf/inv:                         71
+Number of references:                       6
+
+Combinational area:               3441.847527
+Buf/Inv area:                      297.705107
+Noncombinational area:            1522.649776
+Macro/Black Box area:                0.000000
+Net Interconnect area:          107800.540833
+
+Total cell area:                  4964.497303
+Total area:                     112765.038136
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------------------------------
+DIG_FEEDFWD                       4964.4973    100.0    38.8311     0.0000  0.0000  DIG_FEEDFWD
+U0_DLF                            3252.3988     65.5  2605.2138   647.1850  0.0000  DLF_in_width4_coeff_width4_out_width15
+U0_MASH                           1673.2674     33.7   797.8026   875.4648  0.0000  DSM_MASH_1_1_IN_W15
+--------------------------------  ---------  -------  ---------  ---------  ------  --------------------------------------
+Total                                                 3441.8475  1522.6498  0.0000
+
+1

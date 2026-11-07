@@ -1,0 +1,100 @@
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+
+####################################################################################
+           #########################################################
+                  #### Section 1 : Clock Definition ####
+           #########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set	CLK_NAME     MASTER_CLK
+set	CLK_PER      20		
+set 	SETUP_SKEW   0.25
+set 	HOLD_SKEW    0.05
+set 	CLK_RISE     0.1
+set 	CLK_FALL     0.1	 
+
+create_clock -period $CLK_PER -name $CLK_NAME	-waveform "0 [expr $CLK_PER/2]" [get_ports REF_CLK]
+
+set_clock_uncertainty	-setup	$SETUP_SKEW	[get_clocks $CLK_NAME]
+set_clock_uncertainty	-hold	$HOLD_SKEW	[get_clocks $CLK_NAME]
+
+set_clock_transition	-rise	$CLK_RISE	[get_clocks $CLK_NAME]
+set_clock_transition	-fall	$CLK_FALL	[get_clocks $CLK_NAME]
+
+#Add dont_touch
+
+set_dont_touch_network  [get_clocks $CLK_NAME]
+#set_dont_touch_network [get_ports  RST]
+
+####################################################################################
+           #########################################################
+             #### Section 2 : set input/output delay on ports ####
+           #########################################################
+####################################################################################
+set	in_delay   [expr 0.3 * $CLK_PER]
+set	out_delay  [expr 0.3 * $CLK_PER]
+
+#input_delay
+set_input_delay  $in_delay  -clock $CLK_NAME [get_ports {DLF_Ext_En DLF_Ext_Data TDC_OUT KP KI}]
+#output_delay
+set_output_delay $out_delay -clock $CLK_NAME [get_ports {DAC_IN OV_FL UN_FL}]
+####################################################################################
+           #########################################################
+                  #### Section 3 : Driving cells ####
+           #########################################################
+####################################################################################
+
+set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c [get_ports {DLF_Ext_En DLF_Ext_Data TDC_OUT KP KI}]
+
+####################################################################################
+           #########################################################
+                  #### Section 4 : Output load ####
+           #########################################################
+####################################################################################
+
+set_load 0.5 [get_ports {DAC_IN OV_FL UN_FL}]
+
+####################################################################################
+           #########################################################
+                 #### Section 5 : Operating Condition ####
+           #########################################################
+####################################################################################
+
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+
+set_operating_conditions    -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" \
+			    -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"		
+
+####################################################################################
+           #########################################################
+                  #### Section 6 : wireload Model ####
+           #########################################################
+####################################################################################
+
+set_wire_load_model -name tsmc13_wl20 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+####################################################################################
+

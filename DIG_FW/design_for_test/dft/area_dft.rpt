@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : DIG_FEEDFWD
+Version: K-2015.06
+Date   : Mon Jul 13 06:29:03 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FW/design_for_test/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          125
+Number of nets:                           588
+Number of cells:                          427
+Number of combinational cells:            366
+Number of sequential cells:                57
+Number of macros/black boxes:               0
+Number of buf/inv:                         81
+Number of references:                       7
+
+Combinational area:               3732.492423
+Buf/Inv area:                      417.728506
+Noncombinational area:            1907.430761
+Macro/Black Box area:                0.000000
+Net Interconnect area:          104813.857605
+
+Total cell area:                  5639.923184
+Total area:                     110453.780789
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------
+DIG_FEEDFWD                       5639.9232    100.0    32.9476     0.0000  0.0000  DIG_FEEDFWD
+U0_DLF                            3601.8788     63.9  2778.1887   823.6900  0.0000  DLF_in_width4_coeff_width4_out_width15_test_1
+U0_MASH                           1976.8560     35.1   893.1153  1083.7407  0.0000  DSM_MASH_1_1_IN_W15_test_1
+U0_RST                              16.4738      0.3    16.4738     0.0000  0.0000  mux2X1_0
+U0_clk                              11.7670      0.2    11.7670     0.0000  0.0000  mux2X1_1
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------------------------------------------
+Total                                                 3732.4924  1907.4308  0.0000
+
+1

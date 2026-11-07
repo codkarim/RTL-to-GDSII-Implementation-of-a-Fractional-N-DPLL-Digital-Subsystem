@@ -1,0 +1,243 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Mon Jul 13 04:55:33 2026
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+########################### Define Top Module ############################
+set top_module DIG_FEEDFWD
+DIG_FEEDFWD
+###################################################################
+########################### Setup Paths #############################
+###################################################################
+# Add paths to search path
+lappend search_path /home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells
+/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells
+lappend search_path /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl
+/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+###################################################################
+############################ Guidance #############################
+###################################################################
+# Synopsys setup variable
+set synopsys_auto_setup true
+true
+# Formality Setup File
+set_svf "../syn/$top_module.svf"
+SVF set to '../syn/DIG_FEEDFWD.svf'.
+1
+###################################################################
+###################### Reference Container ########################
+###################################################################
+# Read Reference Design Files
+read_sverilog  -container Ref "DIG_FEEDFWD.sv"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DIG_FEEDFWD.sv'
+Created container 'Ref'
+Current container set to 'Ref'
+1
+read_sverilog  -container Ref "DLF.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DLF.sv'
+1
+read_sverilog  -container Ref "DSM_MASH_1_1.sv"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DSM_MASH_1_1.sv'
+1
+# Read Reference technology libraries
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+# set the top Reference Design 
+set_reference_design $top_module
+Reference design set to 'Ref:/WORK/DIG_FEEDFWD'
+1
+set_top $top_module
+Setting top design to 'Ref:/WORK/DIG_FEEDFWD'
+Status:   Elaborating design DIG_FEEDFWD   ...  
+Status:   Elaborating design DLF  in_width=4, coeff_width=4, out_width=15 ...  
+Warning: Unsigned to signed assignment occurs. (File: /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DLF.sv Line: 36)  (FMR_VLOG-057)
+Warning: Unsigned to signed assignment occurs. (File: /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DLF.sv Line: 63)  (FMR_VLOG-057)
+Warning: Unsigned to signed assignment occurs. (File: /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DLF.sv Line: 71)  (FMR_VLOG-057)
+Warning: Unsigned to signed assignment occurs. (File: /home/IC/GRAD_PROJECT/DIG_FW/formal/rtl/DLF.sv Line: 79)  (FMR_VLOG-057)
+Information: Created design named 'DLF_in_width4_coeff_width4_out_width15'. (FE-LINK-13)
+Status:   Elaborating design DSM_MASH_1_1  IN_W=15 ...  
+Information: Created design named 'DSM_MASH_1_1_IN_W15'. (FE-LINK-13)
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design set to 'Ref:/WORK/DIG_FEEDFWD' with warnings
+Reference design set to 'Ref:/WORK/DIG_FEEDFWD'
+1
+###################################################################
+#################### Implementation Container #####################
+###################################################################
+# Read Implementation Design Files
+read_verilog -netlist -container Imp "../syn/DIG_FEEDFWD_netlist.v" 
+No target library specified, default is WORK
+Loading verilog file '/home/IC/GRAD_PROJECT/DIG_FW/formal/syn/DIG_FEEDFWD_netlist.v'
+Created container 'Imp'
+Current container set to 'Imp'
+1
+# Read Implementation technology libraries
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/GRAD_PROJECT/DIG_FW/formal/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+# set the top Implementation Design
+set_implementation_design $top_module
+Implementation design set to 'Imp:/WORK/DIG_FEEDFWD'
+1
+set_top $top_module
+Setting top design to 'Imp:/WORK/DIG_FEEDFWD'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/DIG_FEEDFWD'
+Implementation design set to 'Imp:/WORK/DIG_FEEDFWD'
+1
+###################### Matching Compare points ####################
+match
+Reference design is 'Ref:/WORK/DIG_FEEDFWD'
+Implementation design is 'Imp:/WORK/DIG_FEEDFWD'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+architecture_netlist:          1          0          0          0          1
+boundary            :          1          0          0          0          1
+boundary_netlist    :          1          0          0          0          1
+change_names        :          6          0          0          0          6
+datapath            :          1          0          0          0          1
+environment         :          5          0          0          0          5
+instance_map        :          2          0          0          0          2
+mark                :          8          0          0          0          8
+merge               :          1          0          0          0          1
+replace             :          2          0          0          0          2
+uniquify            :          1          0          0          0          1
+
+SVF files read:
+      ../syn/DIG_FEEDFWD.svf
+
+SVF files produced:
+  /home/IC/GRAD_PROJECT/DIG_FW/formal/fm/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 64 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 30 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+######################### Run Verification ########################
+set successful [verify]
+Reference design is 'Ref:/WORK/DIG_FEEDFWD'
+Implementation design is 'Imp:/WORK/DIG_FEEDFWD'
+    
+*********************************** Matching Results ***********************************    
+ 64 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 30 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/DIG_FEEDFWD
+ Implementation design: Imp:/WORK/DIG_FEEDFWD
+ 64 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       7      57       0      64
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+########################### Reporting #############################
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"
+################# starting graphical user interface #######################
+start_gui

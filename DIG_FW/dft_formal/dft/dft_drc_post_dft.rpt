@@ -1,0 +1,125 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 57 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      *  57 cells are valid scan cells
+         U0_DLF/acc_out_reg[20]
+         U0_DLF/acc_out_reg[19]
+         U0_DLF/acc_out_reg[18]
+         U0_DLF/acc_out_reg[17]
+         U0_DLF/acc_out_reg[16]
+         U0_DLF/acc_out_reg[15]
+         U0_DLF/acc_out_reg[14]
+         U0_DLF/acc_out_reg[13]
+         U0_DLF/acc_out_reg[12]
+         U0_DLF/acc_out_reg[11]
+         U0_DLF/acc_out_reg[10]
+         U0_DLF/acc_out_reg[9]
+         U0_DLF/acc_out_reg[8]
+         U0_DLF/acc_out_reg[7]
+         U0_DLF/acc_out_reg[6]
+         U0_DLF/acc_out_reg[5]
+         U0_DLF/acc_out_reg[4]
+         U0_DLF/acc_out_reg[3]
+         U0_DLF/acc_out_reg[2]
+         U0_DLF/acc_out_reg[1]
+         U0_DLF/acc_out_reg[0]
+         U0_DLF/DLF_IN_FLOP_reg[0]
+         U0_DLF/DLF_IN_FLOP_reg[3]
+         U0_DLF/DLF_IN_FLOP_reg[2]
+         U0_DLF/DLF_IN_FLOP_reg[1]
+         U0_MASH/Q_ERR_2_reg[7]
+         U0_MASH/Q_ERR_2_reg[8]
+         U0_MASH/Q_ERR_2_reg[9]
+         U0_MASH/out_stage_1_reg[2]
+         U0_MASH/out_stage_1_reg[3]
+         U0_MASH/out_stage_1_reg[4]
+         U0_MASH/Q_ERR_2_reg[3]
+         U0_MASH/Q_ERR_2_reg[4]
+         U0_MASH/Q_ERR_2_reg[5]
+         U0_MASH/Q_ERR_2_reg[6]
+         U0_MASH/out_stage_1_reg[0]
+         U0_MASH/Q_ERR_1_reg[8]
+         U0_MASH/Q_ERR_1_reg[9]
+         U0_MASH/out_stage_1_reg[1]
+         U0_MASH/Q_ERR_1_reg[5]
+         U0_MASH/Q_ERR_2_reg[1]
+         U0_MASH/Q_ERR_2_reg[2]
+         U0_MASH/Q_ERR_1_reg[6]
+         U0_MASH/Q_ERR_1_reg[7]
+         U0_MASH/Q_ERR_2_reg[0]
+         U0_MASH/Q_ERR_1_reg[3]
+         U0_MASH/Q_ERR_1_reg[4]
+         U0_MASH/Q_ERR_1_reg[2]
+         U0_MASH/Q_ERR_1_reg[1]
+         U0_MASH/Q_ERR_1_reg[0]
+         U0_MASH/DSM_OUT_reg[0]
+         U0_MASH/DSM_OUT_reg[1]
+         U0_MASH/DSM_OUT_reg[2]
+         U0_MASH/DSM_OUT_reg[3]
+         U0_MASH/DSM_OUT_reg[4]
+         U0_MASH/out_stage_2_reg
+         U0_MASH/out_stage_2_del_reg
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 2816 faults were added to fault list.
+ 0            1986    232         0/0/0    91.37%      0.01
+ 0             188     44         0/0/0    98.05%      0.02
+ 0              44      0         0/0/0    99.61%      0.02
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       2805
+ Possibly detected                PT          0
+ Undetectable                     UD          0
+ ATPG untestable                  AU         11
+ Not detected                     ND          0
+ -----------------------------------------------
+ total faults                              2816
+ test coverage                            99.61%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1
