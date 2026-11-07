@@ -1,0 +1,186 @@
+In mode: Internal_scan...
+  Design has scan chains in this mode
+  Design is scan routed
+  Post-DFT DRC enabled
+
+Information: Starting test design rule checking. (TEST-222)
+  Loading test protocol
+  ...basic checks...
+  ...basic sequential cell checks...
+  ...checking vector rules...
+  ...checking clock rules...
+  ...checking scan chain rules...
+  ...checking scan compression rules...
+  ...checking X-state rules...
+  ...checking tristate rules...
+  ...extracting scan details...
+
+-----------------------------------------------------------------
+  DRC Report
+
+  Total violations: 0
+
+-----------------------------------------------------------------
+
+
+Test Design rule checking did not find violations
+
+-----------------------------------------------------------------
+  Sequential Cell Report
+
+  0 out of 110 sequential cells have violations
+
+-----------------------------------------------------------------
+
+SEQUENTIAL CELLS WITHOUT VIOLATIONS
+      * 110 cells are valid scan cells
+         U0_DSM/DSM_out_reg
+         U0_DSM/Q_ERR_SIGN_reg[18]
+         U0_DSM/Q_ERR_SIGN_reg[17]
+         U0_DSM/Q_ERR_SIGN_reg[16]
+         U0_DSM/Q_ERR_SIGN_reg[15]
+         U0_DSM/Q_ERR_SIGN_reg[14]
+         U0_DSM/Q_ERR_SIGN_reg[13]
+         U0_DSM/Q_ERR_SIGN_reg[12]
+         U0_DSM/Q_ERR_reg[19]
+         U0_DSM/Q_ERR_SIGN_reg[11]
+         U0_DSM/Q_ERR_SIGN_reg[10]
+         U0_DSM/Q_ERR_SIGN_reg[9]
+         U0_DSM/Q_ERR_reg[16]
+         U0_DSM/Q_ERR_reg[17]
+         U0_DSM/Q_ERR_reg[18]
+         U0_DSM/Q_ERR_SIGN_reg[8]
+         U0_DSM/Q_ERR_SIGN_reg[7]
+         U0_DSM/Q_ERR_SIGN_reg[6]
+         U0_DSM/Q_ERR_reg[13]
+         U0_DSM/Q_ERR_reg[14]
+         U0_DSM/Q_ERR_reg[15]
+         U0_DSM/Q_ERR_SIGN_reg[5]
+         U0_DSM/Q_ERR_reg[10]
+         U0_DSM/Q_ERR_reg[11]
+         U0_DSM/Q_ERR_reg[12]
+         U0_DSM/Q_ERR_reg[7]
+         U0_DSM/Q_ERR_reg[8]
+         U0_DSM/Q_ERR_reg[9]
+         U0_DSM/Q_ERR_reg[6]
+         U0_DSM/Q_ERR_reg[0]
+         U0_DSM/Q_ERR_reg[5]
+         U0_DSM/Q_ERR_SIGN_reg[4]
+         U0_DSM/Q_ERR_SIGN_reg[3]
+         U0_DSM/Q_ERR_reg[4]
+         U0_DSM/Q_ERR_reg[3]
+         U0_DSM/Q_ERR_SIGN_reg[1]
+         U0_DSM/Q_ERR_SIGN_reg[19]
+         U0_DSM/Q_ERR_SIGN_reg[2]
+         U0_DSM/Q_ERR_SIGN_reg[0]
+         U0_DSM/Q_ERR_reg[2]
+         U0_DSM/Q_ERR_reg[1]
+         U0_DCW/DCW_reg[7]
+         U0_DCW/DCW_reg[6]
+         U0_DCW/DCW_reg[5]
+         U0_DCW/DCW_reg[4]
+         U0_DCW/DCW_reg[3]
+         U0_DCW/DCW_reg[2]
+         U0_DCW/DCW_reg[1]
+         U0_DCW/DCW_reg[0]
+         U0_DCW/DCW_reg[8]
+         U0_CNT_MMD/MMD_CNTRL_reg[7]
+         U0_CNT_MMD/MMD_CNTRL_reg[6]
+         U0_CNT_MMD/MMD_CNTRL_reg[5]
+         U0_CNT_MMD/MMD_CNTRL_reg[4]
+         U0_CNT_MMD/MMD_CNTRL_reg[3]
+         U0_CNT_MMD/MMD_CNTRL_reg[2]
+         U0_CNT_MMD/MMD_CNTRL_reg[1]
+         U0_CNT_MMD/FRAC_IN_reg[19]
+         U0_CNT_MMD/FRAC_IN_reg[18]
+         U0_CNT_MMD/FRAC_IN_reg[17]
+         U0_CNT_MMD/INTEGER_IN_reg[5]
+         U0_CNT_MMD/FRAC_IN_reg[16]
+         U0_CNT_MMD/FRAC_IN_reg[15]
+         U0_CNT_MMD/FRAC_IN_reg[14]
+         U0_CNT_MMD/INTEGER_IN_reg[4]
+         U0_CNT_MMD/FRAC_IN_reg[13]
+         U0_CNT_MMD/FRAC_IN_reg[12]
+         U0_CNT_MMD/FRAC_IN_reg[11]
+         U0_CNT_MMD/FRAC_IN_reg[10]
+         U0_CNT_MMD/INTEGER_IN_reg[3]
+         U0_CNT_MMD/INTEGER_IN_reg[2]
+         U0_CNT_MMD/FRAC_IN_reg[9]
+         U0_CNT_MMD/FRAC_IN_reg[8]
+         U0_CNT_MMD/FRAC_IN_reg[7]
+         U0_CNT_MMD/FRAC_IN_reg[6]
+         U0_CNT_MMD/INTEGER_IN_reg[1]
+         U0_CNT_MMD/INTEGER_IN_reg[0]
+         U0_CNT_MMD/FRAC_IN_reg[5]
+         U0_CNT_MMD/FRAC_IN_reg[4]
+         U0_CNT_MMD/FRAC_IN_reg[3]
+         U0_CNT_MMD/FRAC_IN_reg[2]
+         U0_CNT_MMD/FRAC_IN_reg[1]
+         U0_CNT_MMD/FRAC_IN_reg[0]
+         U0_CNT_MMD/INTEGER_IN_reg[6]
+         U0_CNT_MMD/MMD_CNTRL_reg[0]
+         U0_LMS/CORR_OUT_reg[12]
+         U0_LMS/CORR_OUT_reg[11]
+         U0_LMS/CORR_OUT_reg[10]
+         U0_LMS/CORR_OUT_reg[9]
+         U0_LMS/CORR_OUT_reg[8]
+         U0_LMS/CORR_OUT_reg[7]
+         U0_LMS/CORR_OUT_reg[6]
+         U0_LMS/CORR_OUT_reg[5]
+         U0_LMS/CORR_OUT_reg[4]
+         U0_LMS/CORR_OUT_reg[3]
+         U0_LMS/CORR_OUT_reg[2]
+         U0_LMS/CORR_OUT_reg[1]
+         U0_LMS/CORR_OUT_reg[0]
+         U0_LMS/CORR_OUT_reg[24]
+         U0_LMS/CORR_OUT_reg[17]
+         U0_LMS/CORR_OUT_reg[21]
+         U0_LMS/CORR_OUT_reg[22]
+         U0_LMS/CORR_OUT_reg[15]
+         U0_LMS/CORR_OUT_reg[14]
+         U0_LMS/CORR_OUT_reg[19]
+         U0_LMS/CORR_OUT_reg[18]
+         U0_LMS/CORR_OUT_reg[13]
+         U0_LMS/CORR_OUT_reg[16]
+         U0_LMS/CORR_OUT_reg[20]
+         U0_LMS/CORR_OUT_reg[23]
+
+....Inferring feed-through connections....
+Information: Test design rule checking completed. (TEST-123)
+  Running test coverage estimation...
+ 7180 faults were added to fault list.
+ ATPG performed for stuck fault model using internal pattern source.
+ ----------------------------------------------------------
+ #patterns     #faults     #ATPG faults  test      process
+ stored     detect/active  red/au/abort  coverage  CPU time
+ ---------  -------------  ------------  --------  --------
+ Begin deterministic ATPG: #uncollapsed_faults=6116, abort_limit=10...
+ 0            4736   1380         0/0/6    80.63%      0.05
+ 0             756    624        0/0/24    91.16%      0.11
+ 0             277    344        3/0/47    95.05%      0.15
+ 0             158    183        5/0/88    97.30%      0.22
+ 0              28    155       5/0/114    97.69%      0.29
+ 
+            Pattern Summary Report
+ -----------------------------------------------
+ #internal patterns                           0
+ -----------------------------------------------
+ 
+
+     Uncollapsed Stuck Fault Summary Report
+ -----------------------------------------------
+ fault class                     code   #faults
+ ------------------------------  ----  ---------
+ Detected                         DT       7008
+ Possibly detected                PT          0
+ Undetectable                     UD          6
+ ATPG untestable                  AU         11
+ Not detected                     ND        155
+ -----------------------------------------------
+ total faults                              7180
+ test coverage                            97.69%
+ -----------------------------------------------
+  Information: The test coverage above may be inferior
+               than the real test coverage with customized
+               protocol and test simulation library.
+1

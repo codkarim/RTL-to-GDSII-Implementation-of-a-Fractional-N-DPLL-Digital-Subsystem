@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : area
+Design : DIG_FEEDFWD
+Version: K-2015.06
+Date   : Mon Jul 13 09:14:02 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FW/design_for_test/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          338
+Number of nets:                           729
+Number of cells:                          372
+Number of combinational cells:            303
+Number of sequential cells:                61
+Number of macros/black boxes:               0
+Number of buf/inv:                         93
+Number of references:                       5
+
+Combinational area:               4522.058107
+Buf/Inv area:                      706.020006
+Noncombinational area:            1882.720062
+Macro/Black Box area:                0.000000
+Net Interconnect area:           89320.446899
+
+Total cell area:                  6404.778170
+Total area:                      95725.225069
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  -------------------------------------------------
+DIG_FEEDFWD                       6404.7782    100.0    35.3010     0.0000  0.0000  DIG_FEEDFWD
+U0_DLF                            4266.7142     66.6  1573.2479   827.2201  0.0000  DLF_in_width4_coeff_width4_out_width15_test_1
+U0_DLF/add_67                      620.1209      9.7   620.1209     0.0000  0.0000  DLF_in_width4_coeff_width4_out_width15_DW01_add_0
+U0_DLF/add_77                     1246.1253     19.5  1246.1253     0.0000  0.0000  DLF_in_width4_coeff_width4_out_width15_DW01_add_1
+U0_MASH                           2076.8755     32.4   354.1867  1055.4999  0.0000  DSM_MASH_1_1_IN_W15_test_1
+U0_MASH/add_34                     374.1906      5.8   374.1906     0.0000  0.0000  DSM_MASH_1_1_IN_W15_DW01_add_1
+U0_MASH/add_52                     292.9983      4.6   292.9983     0.0000  0.0000  DSM_MASH_1_1_IN_W15_DW01_add_0
+U0_RST                              12.9437      0.2    12.9437     0.0000  0.0000  mux2X1_0
+U0_clk                              12.9437      0.2    12.9437     0.0000  0.0000  mux2X1_1
+--------------------------------  ---------  -------  ---------  ---------  ------  -------------------------------------------------
+Total                                                 4522.0581  1882.7201  0.0000
+
+1

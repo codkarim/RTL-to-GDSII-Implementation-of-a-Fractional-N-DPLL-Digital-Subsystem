@@ -1,0 +1,227 @@
+
+
+
+
+
+Tracing Clock scan_clk
+
+****** Clock Tree (scan_clk) Structure
+Nr. Subtrees                   : 2
+Nr. Sinks                      : 57
+Nr.          Rising  Sync Pins : 57
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+SDFFRQX2M (CK)                          53
+SDFFRQX4M (CK)                          1
+SDFFRX1M (CK)                           3
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+CLKMX2X4M (B)                           1
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (scan_clk) Cell: (EMPTY) Net: (scan_clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 1 Input_Pin: (U0_clk/U1/B) Output_Pin: (U0_clk/U1/Y) Cell: (CLKMX2X4M) Net: (CLK_M) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 57
+          Nr. of     Rising  Sync Pins  : 57
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock scan_clk
+*DEPTH 0: scan_clk
+ *DEPTH 1: U0_clk/U1(B->Y)
+  (Sync)U0_DLF/acc_out_reg[20]/CK
+  (Sync)U0_DLF/acc_out_reg[19]/CK
+  (Sync)U0_DLF/acc_out_reg[18]/CK
+  (Sync)U0_DLF/acc_out_reg[17]/CK
+  (Sync)U0_DLF/acc_out_reg[16]/CK
+  (Sync)U0_DLF/acc_out_reg[15]/CK
+  (Sync)U0_DLF/acc_out_reg[14]/CK
+  (Sync)U0_DLF/acc_out_reg[13]/CK
+  (Sync)U0_DLF/acc_out_reg[12]/CK
+  (Sync)U0_DLF/acc_out_reg[11]/CK
+  (Sync)U0_DLF/acc_out_reg[10]/CK
+  (Sync)U0_DLF/acc_out_reg[9]/CK
+  (Sync)U0_DLF/acc_out_reg[8]/CK
+  (Sync)U0_DLF/acc_out_reg[7]/CK
+  (Sync)U0_DLF/acc_out_reg[6]/CK
+  (Sync)U0_DLF/acc_out_reg[5]/CK
+  (Sync)U0_DLF/acc_out_reg[4]/CK
+  (Sync)U0_DLF/acc_out_reg[3]/CK
+  (Sync)U0_DLF/acc_out_reg[2]/CK
+  (Sync)U0_DLF/acc_out_reg[1]/CK
+  (Sync)U0_DLF/acc_out_reg[0]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[0]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[3]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[2]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[7]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[8]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[9]/CK
+  (Sync)U0_MASH/out_stage_1_reg[2]/CK
+  (Sync)U0_MASH/out_stage_1_reg[3]/CK
+  (Sync)U0_MASH/out_stage_1_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[3]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[5]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[6]/CK
+  (Sync)U0_MASH/out_stage_1_reg[0]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[8]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[9]/CK
+  (Sync)U0_MASH/out_stage_1_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[5]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[2]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[6]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[7]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[0]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[3]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[2]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[0]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[0]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[1]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[2]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[3]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[4]/CK
+  (Sync)U0_MASH/out_stage_2_reg/CK
+  (Sync)U0_MASH/out_stage_2_del_reg/CK
+
+
+
+
+
+Tracing Clock REF_CLK
+Pin U0_clk/U1/Y is a crossover pin in Clock scan_clk
+
+****** Clock Tree (REF_CLK) Structure
+Nr. Subtrees                   : 2
+Nr. Sinks                      : 57
+Nr.          Rising  Sync Pins : 57
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+SDFFRQX2M (CK)                          53
+SDFFRQX4M (CK)                          1
+SDFFRX1M (CK)                           3
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+CLKMX2X4M (A)                           1
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (REF_CLK) Cell: (EMPTY) Net: (REF_CLK) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 0
+          Nr. of     Rising  Sync Pins  : 0
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 1
+*DEPTH 1 Input_Pin: (U0_clk/U1/A) Output_Pin: (U0_clk/U1/Y) Cell: (CLKMX2X4M) Net: (CLK_M) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 57
+          Nr. of     Rising  Sync Pins  : 57
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock REF_CLK
+*DEPTH 0: REF_CLK
+ *DEPTH 1: U0_clk/U1(A->Y)
+  (Sync)U0_DLF/acc_out_reg[20]/CK
+  (Sync)U0_DLF/acc_out_reg[19]/CK
+  (Sync)U0_DLF/acc_out_reg[18]/CK
+  (Sync)U0_DLF/acc_out_reg[17]/CK
+  (Sync)U0_DLF/acc_out_reg[16]/CK
+  (Sync)U0_DLF/acc_out_reg[15]/CK
+  (Sync)U0_DLF/acc_out_reg[14]/CK
+  (Sync)U0_DLF/acc_out_reg[13]/CK
+  (Sync)U0_DLF/acc_out_reg[12]/CK
+  (Sync)U0_DLF/acc_out_reg[11]/CK
+  (Sync)U0_DLF/acc_out_reg[10]/CK
+  (Sync)U0_DLF/acc_out_reg[9]/CK
+  (Sync)U0_DLF/acc_out_reg[8]/CK
+  (Sync)U0_DLF/acc_out_reg[7]/CK
+  (Sync)U0_DLF/acc_out_reg[6]/CK
+  (Sync)U0_DLF/acc_out_reg[5]/CK
+  (Sync)U0_DLF/acc_out_reg[4]/CK
+  (Sync)U0_DLF/acc_out_reg[3]/CK
+  (Sync)U0_DLF/acc_out_reg[2]/CK
+  (Sync)U0_DLF/acc_out_reg[1]/CK
+  (Sync)U0_DLF/acc_out_reg[0]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[0]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[3]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[2]/CK
+  (Sync)U0_DLF/DLF_IN_FLOP_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[7]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[8]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[9]/CK
+  (Sync)U0_MASH/out_stage_1_reg[2]/CK
+  (Sync)U0_MASH/out_stage_1_reg[3]/CK
+  (Sync)U0_MASH/out_stage_1_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[3]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[5]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[6]/CK
+  (Sync)U0_MASH/out_stage_1_reg[0]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[8]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[9]/CK
+  (Sync)U0_MASH/out_stage_1_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[5]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[2]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[6]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[7]/CK
+  (Sync)U0_MASH/Q_ERR_2_reg[0]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[3]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[4]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[2]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[1]/CK
+  (Sync)U0_MASH/Q_ERR_1_reg[0]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[0]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[1]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[2]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[3]/CK
+  (Sync)U0_MASH/DSM_OUT_reg[4]/CK
+  (Sync)U0_MASH/out_stage_2_reg/CK
+  (Sync)U0_MASH/out_stage_2_del_reg/CK

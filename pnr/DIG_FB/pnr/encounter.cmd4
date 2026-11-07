@@ -1,0 +1,183 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Fri Aug 14 01:56:25 2026                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+setUIVar rda_Input ui_topcell DIG_FEEDBCK
+setUIVar rda_Input ui_netlist /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT.v
+setUIVar rda_Input ui_timelib,min /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+setUIVar rda_Input ui_timelib,max /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+setUIVar rda_Input ui_timelib /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+setUIVar rda_Input ui_leffile {/home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Grad_Projects/DIG_FB/pnr/import/DIG_FEEDBCK.lef}
+setUIVar rda_Input ui_captbl_file /home/ahesham/Grad_Projects/DIG_FB/std_cells/captables/tsmc13fsg.capTbl
+setUIVar rda_Input ui_timingcon_file /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT_func.sdc
+setUIVar rda_Input ui_pwrnet VDD
+setUIVar rda_Input ui_gndnet VSS
+commitConfig
+create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+create_constraint_mode -name func_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_func.sdc}
+create_constraint_mode -name scan_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_scan.sdc}
+create_constraint_mode -name capture_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_capture.sdc}
+create_rc_corner -name RCcorner -cap_table "../std_cells/captables/tsmc13fsg.capTbl"
+create_delay_corner -name min_corner -library_set min_library -rc_corner RCcorner
+create_delay_corner -name max_corner -library_set max_library -rc_corner RCcorner
+create_analysis_view -name setup1_analysis_view -delay_corner max_corner -constraint_mode func_mode
+create_analysis_view -name hold1_analysis_view  -delay_corner min_corner -constraint_mode func_mode
+create_analysis_view -name setup2_analysis_view -delay_corner max_corner -constraint_mode scan_mode 
+create_analysis_view -name hold2_analysis_view  -delay_corner min_corner -constraint_mode scan_mode 
+create_analysis_view -name setup3_analysis_view -delay_corner max_corner -constraint_mode capture_mode
+create_analysis_view -name hold3_analysis_view  -delay_corner min_corner -constraint_mode capture_mode
+set_analysis_view -setup {setup1_analysis_view setup2_analysis_view setup3_analysis_view} \
+		  -hold {hold1_analysis_view hold2_analysis_view hold3_analysis_view}
+loadFPlan ./DIG_FEEDBCK.fp
+setDrawView fplan
+uiSetTool obstruct
+zoomBox 210.340 15.539 209.869 14.832
+zoomBox 210.501 14.915 210.201 14.832
+zoomBox 195.989 5.657 168.697 -4.694
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage 1 0
+createObstruct -0.772 -0.332 188.240 3.186
+zoomBox 192.695 192.459 158.111 177.638
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage 1 0
+createObstruct -0.429 184.214 188.630 188.417
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postCTS -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postCTS -outDir timingReports
+setDrawView fplan
+setDrawView ameba
+setNanoRouteMode -quiet -routeTopRoutingLayer 6
+routeDesign -globalDetail -viaOpt -wireOpt
+setDrawView place
+clearDrc
+verifyGeometry -noMinArea
+clearDrc
+refinePlace -preserveRouting
+setNanoRouteMode -routeWithEco true
+routeDesign -globalDetail -viaOpt -wireOpt
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postRoute -outDir timingReports
+addFiller -cell {FILL1M FILL2M FILL4M FILL8M FILL16M FILL32M FILL64M} -prefix FILLER -markFixed
+setLayerPreference allM0 -isVisible 0
+setLayerPreference allM1 -isVisible 0
+setLayerPreference allM2 -isVisible 0
+setLayerPreference allM3 -isVisible 0
+setLayerPreference allM4 -isVisible 0
+setLayerPreference allM5 -isVisible 0
+setLayerPreference allM6 -isVisible 0
+setLayerPreference allM7 -isVisible 0
+setLayerPreference allM1Cont -isVisible 0
+setLayerPreference allM2Cont -isVisible 0
+setLayerPreference allM3Cont -isVisible 0
+setLayerPreference allM4Cont -isVisible 0
+setLayerPreference allM5Cont -isVisible 0
+setLayerPreference allM6Cont -isVisible 0
+setLayerPreference allM7Cont -isVisible 0
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setLayerPreference allM0 -isVisible 1
+setLayerPreference allM1 -isVisible 1
+setLayerPreference allM2 -isVisible 1
+setLayerPreference allM3 -isVisible 1
+setLayerPreference allM4 -isVisible 1
+setLayerPreference allM5 -isVisible 1
+setLayerPreference allM6 -isVisible 1
+setLayerPreference allM7 -isVisible 1
+setLayerPreference allM1Cont -isVisible 1
+setLayerPreference allM2Cont -isVisible 1
+setLayerPreference allM3Cont -isVisible 1
+setLayerPreference allM4Cont -isVisible 1
+setLayerPreference allM5Cont -isVisible 1
+setLayerPreference allM6Cont -isVisible 1
+setLayerPreference allM7Cont -isVisible 1
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+zoomBox 202.178 196.226 -54.652 -12.988
+verifyGeometry -noMinArea
+zoomBox 208.835 160.048 147.190 126.250
+zoomBox 190.989 158.241 183.953 151.743
+zoomBox 196.694 170.579 139.760 132.231
+zoomBox 195.821 162.465 180.857 154.219
+uiSetTool moveWire
+selectWire 186.7050 0.3900 187.7050 187.2950 6 VDD
+editMove x -0.065
+deselectAll
+selectWire 186.6400 0.3900 187.6400 187.2950 6 VDD
+editMove x -0.09
+deselectAll
+zoomBox 214.104 81.648 147.758 48.947
+clearDrc
+verifyGeometry -noMinArea
+zoomBox -12.929 114.821 28.008 82.590
+zoomBox -6.487 106.058 6.971 95.497
+selectWire 0.3900 0.3900 1.3900 187.2950 6 VDD
+editMove x 0.06
+verifyGeometry -noMinArea
+deselectAll
+verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+verifyProcessAntenna -reportfile DIG_FEEDBCK.antenna.rpt -leffile DIG_FEEDBCK.antenna.lef -error 1000
+checkFiller -highlight true
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postRoute -outDir timingReports
+clearClockDomains
+setClockDomains -all
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix DIG_FEEDBCK_postRoute -outDir timingReports
+saveNetlist export/DIG_FEEDBCK.v
+saveNetlist export/DIG_FEEDBCK_pg.v -includePowerGround
+rcOut -spf export/DIG_FEEDBCK.spf
+saveDesign /home/ahesham/Grad_Projects/DIG_FB/pnr/DIG_FEEDBCK.enc
+saveNetlist export/DIG_FEEDBCK.v
+saveNetlist export/DIG_FEEDBCK_pg.v -includePowerGround
+rcOut -spf export/DIG_FEEDBCK.spf
+saveNetlist export/DIG_FEEDBCK.v
+saveNetlist export/DIG_FEEDBCK_pg.v -includePowerGround
+rcOut -spf export/DIG_FEEDBCK.spf
+delayCal -sdf export/DIG_FEEDBCK.sdf -version 3.0
+report_power -outfile report/power.rpt
+streamOut export/DIG_FEEDBCK.gds -mapFile ./import/gds2InLayer.map -libName DesignLib -stripes 1 -units 2000 -mode ALL

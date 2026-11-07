@@ -1,0 +1,763 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Fri Aug 14 01:43:28 2026 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell DIG_FEEDBCK
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13_m_macros.lef /home/ahesham/Grad_Projects/DIG_FB/pnr/import/DIG_FEEDBCK.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Grad_Projects/DIG_FB/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT_func.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+
+Loading Lef file /home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13fsg_7lm_tech.lef...
+
+Loading Lef file /home/ahesham/Grad_Projects/DIG_FB/std_cells/lef/tsmc13_m_macros.lef...
+Set DBUPerIGU to M2 pitch 820.
+Initializing default via types and wire widths ...
+
+Loading Lef file /home/ahesham/Grad_Projects/DIG_FB/pnr/import/DIG_FEEDBCK.lef...
+**WARN: (SOCLF-246):	The 'UNITS' attribute should be set
+in the first lef file (technology lef). There is an attempt to set it
+in subsequent lef files which will be ignored.
+**WARN: (SOCLF-46):	Class CORE macro 'DIG_FEEDBCK' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE FE_CORE_0 was
+created and will be used for this macro, using height 188.0000 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (SOCLF-200):	Pin 'FCW[8]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[9]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[10]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[11]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[12]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[13]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[14]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[15]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[16]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[17]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[18]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[19]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[20]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[21]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[22]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[23]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[24]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[25]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+**WARN: (SOCLF-200):	Pin 'FCW[26]' in macro 'DIG_FEEDBCK' has no ANTENNAGATEAREA attribute defined.
+For any non-power/ground input or inout pin, The attribute should be
+defined if any area ratio antenna attribute is defined on any layer.
+
+Power Planner/ViaGen version 8.1.45 promoted on 09/01/2008.
+viaInitial starts at Fri Aug 14 01:44:12 2026
+viaInitial ends at Fri Aug 14 01:44:12 2026
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+**WARN: (SOCDB-2079):	fterm SI of cell DIG_FEEDBCK is not defined in LEF.
+**WARN: (SOCDB-2079):	fterm SO of cell DIG_FEEDBCK is not defined in LEF.
+**WARN: (SOCDB-2079):	fterm test_si2 of cell DIG_FEEDBCK is not defined in LEF.
+**WARN: (SOCDB-2079):	fterm test_so2 of cell DIG_FEEDBCK is not defined in LEF.
+Reading verilog netlist '/home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT.v'
+Inserting temporary buffers to remove assignment statements.
+Non-leaf cell DIG_FEEDBCK will be treated as a leaf cell.
+
+*** Memory Usage v0.144 (Current mem = 188.469M, initial mem = 62.238M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=188.5M) ***
+Set top cell to DIG_FEEDBCK.
+Reading max timing library '/home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' 
+Reading min timing library '/home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' 
+Reading max timing library '/home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+Reading min timing library '/home/ahesham/Grad_Projects/DIG_FB/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+**WARN: (SOCSYC-2):	Timing is not defined for cell DIG_FEEDBCK.
+*** End library_loading (cpu=0.16min, mem=91.1M, fe_cpu=0.32min, fe_mem=279.6M) ***
+Starting recursive module instantiation check.
+No recursion found.
+*****NEW dbFlattenCell is used.
+Flattening Cell DIG_FEEDBCK ...
+*** Netlist is unique.
+** info: there are 2499 modules.
+** info: there are 957 stdCell insts.
+
+*** Memory Usage v0.144 (Current mem = 279.840M, initial mem = 62.238M) ***
+CTE reading timing constraint file '/home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT_func.sdc' ...
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT_func.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (EMS-27):	Message (SOCCTE-286) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (EMS-27):	Message (SOCCTE-289) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File /home/ahesham/Grad_Projects/DIG_FB/dft/DIG_FEEDBCK_DFT_func.sdc : Skipped unsupported command: set_units
+
+
+*** Read timing constraints (cpu=0:00:00.1 mem=282.5M) ***
+*info - Done with setDoAssign with 5 assigns removed and 0 assigns could not be removed.
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2M BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX32M BUFX3M CLKBUFX1M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX3M CLKBUFX32M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1M CLKINVX12M CLKINVX16M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX3M CLKINVX32M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX2M INVX1M INVX20M INVX24M INVX32M INVX4M INVX3M INVX6M INVX5M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF.
+**WARN: (SOCDC-1159):	Invalid input transition time. The default 0.1ps input transition time will be used.
+Set Input Pin Transition Delay as 0.1 ps.
+Reading Capacitance Table File /home/ahesham/Grad_Projects/DIG_FB/std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+<CMD> create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+<CMD> create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+<CMD> create_constraint_mode -name func_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_func.sdc}
+<CMD> create_constraint_mode -name scan_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_scan.sdc}
+<CMD> create_constraint_mode -name capture_mode -sdc_files {../dft/DIG_FEEDBCK_DFT_capture.sdc}
+<CMD> create_rc_corner -name RCcorner -cap_table "../std_cells/captables/tsmc13fsg.capTbl"
+<CMD> create_delay_corner -name min_corner -library_set min_library -rc_corner RCcorner
+<CMD> create_delay_corner -name max_corner -library_set max_library -rc_corner RCcorner
+<CMD> create_analysis_view -name setup1_analysis_view -delay_corner max_corner -constraint_mode func_mode
+<CMD> create_analysis_view -name hold1_analysis_view  -delay_corner min_corner -constraint_mode func_mode
+<CMD> create_analysis_view -name setup2_analysis_view -delay_corner max_corner -constraint_mode scan_mode 
+<CMD> create_analysis_view -name hold2_analysis_view  -delay_corner min_corner -constraint_mode scan_mode 
+<CMD> create_analysis_view -name setup3_analysis_view -delay_corner max_corner -constraint_mode capture_mode
+<CMD> create_analysis_view -name hold3_analysis_view  -delay_corner min_corner -constraint_mode capture_mode
+<CMD> set_analysis_view -setup {setup1_analysis_view setup2_analysis_view setup3_analysis_view} \
+		  -hold {hold1_analysis_view hold2_analysis_view hold3_analysis_view}
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File ../std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ Analysis View: setup1_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: setup2_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: setup3_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold1_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold2_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+ Analysis View: hold3_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : '../std_cells/captables/tsmc13fsg.capTbl'
+    RC-Corner Default Res. Factor      : 1
+    RC-Corner Detail Res. Factor       : 1
+    RC-Corner Default Cap. Factor      : 1
+    RC-Corner Detail Cap. Factor       : 1
+    RC-Corner Cross Cap. Factor        : 1
+*Info: initialize multi-corner CTS.
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_func.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_func.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_func.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_scan.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_scan.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_scan.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_capture.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_capture.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_capture.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_func.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_func.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_func.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_scan.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_scan.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_scan.sdc : Skipped unsupported command: set_units
+
+
+CTE reading timing constraint file '../dft/DIG_FEEDBCK_DFT_capture.sdc' ...
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../dft/DIG_FEEDBCK_DFT_capture.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with  1 WARNING
+WARNING (CTE-25): Line: 8 of File ../dft/DIG_FEEDBCK_DFT_capture.sdc : Skipped unsupported command: set_units
+
+
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX2M BUFX32M BUFX3M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX1M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX32M CLKBUFX3M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX12M CLKINVX16M CLKINVX1M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX32M CLKINVX3M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX1M INVX20M INVX24M INVX2M INVX32M INVX3M INVX4M INVX5M INVX6M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+<CMD> floorPlan -d 188 188 3.0 3.0 3.0 3.0
+Adjusting Core to Left to: 3.2800. Core to Bottom to: 3.2800.
+<CMD> zoomBox 216.221 149.170 152.699 87.530
+<CMD> zoomBox 200.273 128.974 167.665 109.269
+<CMD> addRing -spacing_bottom 0.5 -width_left 1 -width_bottom 1 -width_top 1 -spacing_top 0.5 -layer_bottom METAL5 -center 1 -stacked_via_top_layer METAL7 -width_right 1 -around core -jog_distance 0.205 -offset_bottom 0.205 -layer_top METAL5 -threshold 0.205 -offset_left 0.205 -spacing_right 0.5 -spacing_left 0.5 -offset_right 0.205 -offset_top 0.205 -layer_right METAL6 -nets {VSS VDD } -stacked_via_bottom_layer METAL1 -layer_left METAL6
+
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (172.00, 0.20) (172.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (166.00, 0.20) (166.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (160.00, 0.20) (160.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (154.00, 0.20) (154.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (148.00, 0.20) (148.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (142.00, 0.20) (142.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (136.00, 0.20) (136.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (130.00, 0.20) (130.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (124.00, 0.20) (124.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (118.00, 0.20) (118.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (112.00, 0.20) (112.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (106.00, 0.20) (106.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (100.00, 0.20) (100.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (94.00, 0.20) (94.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (88.00, 0.20) (88.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (82.00, 0.20) (82.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (76.00, 0.20) (76.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (70.00, 0.20) (70.20, 0.39)
+**WARN: (SOCPP-573):	The power planner detects a potential spacing violation. Run verifyGeometry to ensure DRC clean.
+ 	layer METAL5, area (64.00, 0.20) (64.20, 0.39)
+
+The power planner created 8 wires.
+**WARN: (SOCPP-582):	19 wires violate design rules.
+
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Fri Aug 14 01:45:58 2026
+
+Design Name: DIG_FEEDBCK
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (188.0000, 188.0000)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Fri Aug 14 01:45:58 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 291.9) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  19 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 19 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 19
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 19 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.0  MEM: 1.0M)
+
+<CMD> zoomBox 180.226 14.598 50.123 -5.871
+<CMD_INTERNAL> uiSetTool cutWire
+<CMD> zoomBox 65.859 4.622 55.812 -4.909
+<CMD> editCutWire -x1 62.619 -y1 -0.062 -x2 62.619 -y2 1.4665
+<CMD> zoomBox 174.814 7.774 155.523 -3.989
+<CMD> editCutWire -x1 173.191 -y1 0.0255 -x2 173.191 -y2 1.5515
+<CMD_INTERNAL> uiSetTool select
+<CMD> selectWire 62.6200 0.3900 173.1900 1.3900 5 VDD
+<CMD> setSelectedStripBoxState 0 ROUTED
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editStretch x 1.095 high
+<CMD> zoomBox 68.238 8.716 48.476 -5.401
+<CMD> editStretch x -1.315 low
+<CMD_INTERNAL> uiSetTool defineArea pwrEpv:set_area_bbox
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editPowerVia -bottom_layer METAL1 -area {62.862 1.553 61.24 0.172} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Fri Aug 14 01:47:15 2026.
+
+
+The editPowervia process ended at Fri Aug 14 01:47:15 2026.
+<CMD> deselectAll
+<CMD> zoomBox 182.108 6.128 160.227 -7.989
+<CMD_INTERNAL> uiSetTool defineArea pwrEpv:set_area_bbox
+<CMD_INTERNAL> uiSetTool stretchWire
+<CMD> editPowerVia -bottom_layer METAL1 -area {174.9015 1.6955 172.9585 0.1375} -add_vias 1 -top_layer METAL7
+
+The editPowervia process started at Fri Aug 14 01:47:33 2026.
+
+
+The editPowervia process ended at Fri Aug 14 01:47:33 2026.
+<CMD> selectWire 61.3050 0.3900 174.2850 1.3900 3 VDD
+<CMD> editStretch x -0.005 high
+<CMD> deselectAll
+<CMD> selectWire 61.3050 0.3900 174.2800 1.3900 3 VDD
+<CMD> deselectAll
+<CMD> selectWire 173.1900 0.3900 187.7050 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 61.3050 0.3900 174.2800 1.3900 3 VDD
+<CMD> deselectAll
+<CMD> selectWire 173.1900 0.3900 187.7050 1.3900 5 VDD
+<CMD> editStretch x -0.02 low
+<CMD> deselectAll
+<CMD> zoomBox 77.884 12.480 42.830 -10.812
+<CMD> zoomBox 65.299 4.345 58.754 -2.730
+<CMD> selectWire 0.3900 0.3900 62.6200 1.3900 5 VDD
+<CMD> deselectAll
+<CMD> selectWire 61.3050 0.3900 174.2800 1.3900 3 VDD
+<CMD> editStretch x 0.0 low
+<CMD> editStretch x 0.095 low
+<CMD> deselectAll
+<CMD> selectWire 0.3900 0.3900 62.6200 1.3900 5 VDD
+<CMD> editStretch x -0.095 high
+<CMD> deselectAll
+<CMD> clearDrc
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Fri Aug 14 01:49:02 2026
+
+Design Name: DIG_FEEDBCK
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (188.0000, 188.0000)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Fri Aug 14 01:49:02 2026
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 292.1) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 0.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:00.1  MEM: 1.0M)
+
+<CMD> addStripe -block_ring_top_layer_limit METAL7 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL5 -set_to_set_distance 40 -stacked_via_top_layer METAL7 -padcore_ring_top_layer_limit METAL7 -spacing 0.5 -merge_stripes_value 0.205 -layer METAL6 -block_ring_bottom_layer_limit METAL5 -width 1 -nets {VSS VDD } -stacked_via_bottom_layer METAL1
+**WARN: (SOCPP-2008):	AddStripe option -remove_floating_stripe_over_block is ON so all fragmented stripes within a block will be removed.
+  To turn OFF, setAddStripeOption -remove_floating_stripe_over_block 0.
+
+Starting stripe generation ...
+Stripe generation is complete.
+
+The power planner created 10 wires.
+
+<CMD> zoomBox 24.479 193.400 -11.047 166.109
+<CMD> selectWire 4.7800 0.3900 5.7800 187.2950 6 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> selectWire 3.2800 1.8900 4.2800 185.7950 6 VSS
+<CMD> deleteSelectedFromFPlan
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { 1 6 } -blockPinTarget { nearestRingStripe nearestTarget } -padPinPortConnect { allPort oneGeom } -checkAlignedSecondaryPin 1 -blockPin useLef -allowJogging 1 -crossoverViaBottomLayer 1 -allowLayerChange 1 -targetViaTopLayer 7 -crossoverViaTopLayer 7 -targetViaBottomLayer 1 -nets { VSS VDD }
+No routing obstructions were found in the design.
+*** Begin SPECIAL ROUTE on Fri Aug 14 01:49:58 2026 ***
+Sroute/fcroute version 8.1.45 promoted on 09/01/2008.
+SPECIAL ROUTE ran on directory: /home/ahesham/Grad_Projects/DIG_FB/pnr
+SPECIAL ROUTE ran on machine: localhost.localdomain (Linux 2.6.32-431.29.2.el6.x86_64 x86_64 2.81Ghz)
+
+Begin option processing ...
+(from .sroute_8355.conf) srouteConnectPowerBump set to false
+(from .sroute_8355.conf) routeSelectNet set to "VSS VDD"
+(from .sroute_8355.conf) routeSpecial set to true
+(from .sroute_8355.conf) srouteCrossoverViaTopLayer set to 7
+(from .sroute_8355.conf) srouteFollowCorePinEnd set to 3
+(from .sroute_8355.conf) srouteFollowPadPin set to true
+(from .sroute_8355.conf) srouteJogControl set to "preferWithChanges differentLayer"
+(from .sroute_8355.conf) sroutePadPinAllPorts set to true
+(from .sroute_8355.conf) sroutePreserveExistingRoutes set to true
+(from .sroute_8355.conf) srouteTopLayerLimit set to 6
+(from .sroute_8355.conf) srouteTopTargetLayerLimit set to 7
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 471.00 megs.
+
+Reading LEF technology information...
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+   **WARN: CORE MACRO DIG_FEEDBCK has no site specification
+   A total of 1 warning.
+Read in 15 layers, 7 routing layers, 1 overlap layer
+Read in 633 macros, 106 used
+Read in 105 components
+  105 core components: 105 unplaced, 0 placed, 0 fixed
+Read in 56 physical pins
+  56 physical pins: 0 unplaced, 0 placed, 56 fixed
+Read in 4 logical pins
+Read in 59 nets
+Read in 2 special nets, 2 routed
+Read in 56 terminals
+2 nets selected.
+
+Begin power routing ...
+**WARN: (SOCSR-554):	Top target layer is beyond top routing layer. Set top target layer to 6.
+**WARN: (SOCSR-1253):	Net VDD does not have standard cells to be routed. Please check net list.
+**WARN: (SOCSR-1254):	Net VDD does not have block pins to be routed. Please check net list.
+**WARN: (SOCSR-1255):	Net VDD does not have pad pins to create pad ring. Please check net list or port class. (must NOT be CORE class and must not be AREAIO subclass). 
+**WARN: (SOCSR-1256):	Net VDD does not have CORE class pad pins to be routed.
+	Please check net list or port class.
+Net VDD does not have AREAIO class pad pins to be routed.
+	Please check net list or port class.
+**WARN: (SOCSR-1253):	Net VSS does not have standard cells to be routed. Please check net list.
+**WARN: (SOCSR-1254):	Net VSS does not have block pins to be routed. Please check net list.
+**WARN: (SOCSR-1255):	Net VSS does not have pad pins to create pad ring. Please check net list or port class. (must NOT be CORE class and must not be AREAIO subclass). 
+**WARN: (SOCSR-1256):	Net VSS does not have CORE class pad pins to be routed.
+	Please check net list or port class.
+Net VSS does not have AREAIO class pad pins to be routed.
+	Please check net list or port class.
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VDD
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VDD
+CPU time for FollowPin 0 seconds
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VSS
+**WARN: (SOCSR-468):	No core cells defined in COMPONENTS section
+ and/or   No core cells defined in SPECIALNETS VSS
+CPU time for FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 128
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 64
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 482.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 56 io pins ...
+ Updating DB with 73 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+
+sroute post-processing starts at Fri Aug 14 01:49:58 2026
+The viaGen is rebuilding shadow vias for net VSS.
+sroute post-processing ends at Fri Aug 14 01:49:58 2026
+
+sroute post-processing starts at Fri Aug 14 01:49:58 2026
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Fri Aug 14 01:49:58 2026
+
+
+sroute: Total CPU time used = 0:0:0
+sroute: Total Real time used = 0:0:0
+sroute: Total Memory used = 9.12 megs
+sroute: Total Peak Memory used = 304.53 megs
+<CMD> saveFPlan /home/ahesham/Grad_Projects/DIG_FB/pnr/DIG_FEEDBCK.fp
+<CMD> zoomBox -8.930 193.871 205.163 178.344
+<CMD> zoomBox -3.337 194.192 197.018 182.886
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD_INTERNAL> uiSetTool obstruct
+<CMD> zoomBox -1.175 191.554 13.843 179.494
+<CMD> createObstruct -0.423 184.159 7.164 188.522
+<CMD> redraw
+<CMD> redraw
+<CMD> createObstruct -1.713 187.932 7.933 188.919
+<CMD> undo
+
+*** Memory Usage v0.144 (Current mem = 304.527M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:02:07, real=0:08:29, mem=304.5M) ---

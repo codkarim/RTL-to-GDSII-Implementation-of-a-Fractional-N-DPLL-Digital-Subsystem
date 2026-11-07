@@ -1,0 +1,8 @@
+################################################
+#                                              #
+# Silicon Perspective, A Cadence Company       #
+# FirstEncounter Design Restore script         #
+#    for design session: /home/ahesham/Grad_Projects/DIG_FW/pnr/DIG_FEEDFWD.enc                     
+#                                              #
+################################################
+restoreDesign /home/ahesham/Grad_Projects/DIG_FW/pnr/DIG_FEEDFWD.enc.dat DIG_FEEDFWD

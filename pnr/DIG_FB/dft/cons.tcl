@@ -1,0 +1,161 @@
+# Constraints
+# ----------------------------------------------------------------------------
+#
+# 1. Master Clock Definitions
+#
+# 2. Generated Clock Definitions
+#
+# 3. Clock Uncertainties
+#
+# 4. Clock Latencies 
+#
+# 5. Clock Relationships
+#
+# 6. set input/output delay on ports
+#
+# 7. Driving cells
+#
+# 8. Output load
+
+####################################################################################
+           #########################################################
+                  #### Section 1 : Clock Definition ####
+           #########################################################
+#################################################################################### 
+# 1. Master Clock Definitions 
+# 2. Generated Clock Definitions
+# 3. Clock Latencies
+# 4. Clock Uncertainties
+# 4. Clock Transitions
+####################################################################################
+set	CLK_NAME     MASTER_CLK
+set	CLK_PER      20		
+set 	SETUP_SKEW   0.25
+set 	HOLD_SKEW    0.05
+set  	CLK_LAT	     0
+set 	CLK_RISE     0.1
+set 	CLK_FALL     0.1	 
+
+
+set  DFT_CLK_NAME     SCAN_CLK
+set  DFT_CLK_PER      10		
+set  DFT_SETUP_SKEW   0.025
+set  DFT_HOLD_SKEW    0.01
+set  DFT_CLK_LAT      0
+set  DFT_CLK_RISE     0.1
+set  DFT_CLK_FALL     0.1
+
+#################################### FUNC Clocks ###################################
+
+create_clock -period $CLK_PER -name $CLK_NAME	-waveform "0 [expr $CLK_PER/2]" [get_ports FB_CLK]
+
+set_clock_uncertainty	-setup	$SETUP_SKEW	[get_clocks $CLK_NAME]
+set_clock_uncertainty	-hold	$HOLD_SKEW	[get_clocks $CLK_NAME]
+
+set_clock_transition	-rise	$CLK_RISE	[get_clocks $CLK_NAME]
+set_clock_transition	-fall	$CLK_FALL	[get_clocks $CLK_NAME]
+
+set_clock_latency $CLK_LAT	                [get_clocks $CLK_NAME]
+
+#################################### SCAN Clocks ###################################					  
+
+create_clock -period $DFT_CLK_PER -name $DFT_CLK_NAME	-waveform "0 [expr $DFT_CLK_PER/2]" [get_ports scan_clk]
+
+set_clock_uncertainty	-setup	$DFT_SETUP_SKEW	 [get_clocks $DFT_CLK_NAME]
+set_clock_uncertainty	-hold	$DFT_HOLD_SKEW	 [get_clocks $DFT_CLK_NAME]
+
+set_clock_transition	-rise	$DFT_CLK_RISE	[get_clocks $DFT_CLK_NAME]
+set_clock_transition	-fall	$DFT_CLK_FALL	[get_clocks $DFT_CLK_NAME]
+
+set_clock_latency $DFT_CLK_LAT	                [get_clocks $DFT_CLK_NAME]	   
+
+#Add dont_touch
+set_dont_touch_network "$CLK_NAME $DFT_CLK_NAME"
+
+####################################################################################
+           #########################################################
+                  #### Section 2 : Clocks Relationships ####
+           #########################################################
+####################################################################################
+
+set_clock_groups -asynchronous -group [get_clocks $CLK_NAME] -group [get_clocks $DFT_CLK_NAME]
+
+####################################################################################
+           #########################################################
+             #### Section 3 : set input/output delay on ports ####
+           #########################################################
+####################################################################################
+
+set	in_delay   [expr 0.3 * $CLK_PER]
+set	out_delay  [expr 0.3 * $CLK_PER]
+
+set dft_in_delay  [expr 0.3*$DFT_CLK_PER]
+set dft_out_delay [expr 0.3*$DFT_CLK_PER]
+
+#Constrain Input Paths
+set_input_delay  $in_delay  -clock $CLK_NAME [get_ports {TDC_OUT FCW}]
+
+#Constrain Scan Input Paths
+set_input_delay $dft_in_delay -clock $DFT_CLK_NAME [get_ports SI]
+set_input_delay $dft_in_delay -clock $DFT_CLK_NAME [get_ports SE]
+set_input_delay $dft_in_delay -clock $DFT_CLK_NAME [get_ports test_mode]
+
+#Constrain Output Paths
+set_output_delay $out_delay -clock $CLK_NAME [get_ports {LMS_OV_FL LMS_UN_FL MMD_CNTRL DCW}]
+
+#Constrain Scan Output Paths
+set_output_delay $dft_out_delay -clock $DFT_CLK_NAME [get_ports SO]
+
+####################################################################################
+           #########################################################
+                  #### Section 4 : Driving cells ####
+           #########################################################
+####################################################################################
+
+#functional ports
+set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c [get_ports {TDC_OUT FCW}]
+
+#scan ports
+set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c [get_ports {SI SE test_mode}]
+
+####################################################################################
+           #########################################################
+                  #### Section 5 : Output load ####
+           #########################################################
+####################################################################################
+
+#functional ports
+set_load 0.5 [get_ports {LMS_OV_FL LMS_UN_FL MMD_CNTRL DCW}]
+
+#scan ports
+set_load 0.1 [get_ports SO]
+
+####################################################################################
+           #########################################################
+                 #### Section 6 : Operating Condition ####
+           #########################################################
+####################################################################################
+
+# Define the Worst Library for Max(#setup) analysis
+# Define the Best Library for Min(hold) analysis
+
+set_operating_conditions    -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" \
+			    -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"		
+
+####################################################################################
+           #########################################################
+                  #### Section 7 : wireload Model ####
+           #########################################################
+####################################################################################
+
+set_wire_load_model -name tsmc13_wl20 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+###################################################################################
+           #########################################################
+                  #### Section 8 : Case Analysis ####
+           #########################################################
+####################################################################################
+
+set_case_analysis 0 [get_ports test_mode]
+
+####################################################################################

@@ -1,0 +1,57 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Thu Jul 16 01:57:08 2026                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+restoreDesign /home/ahesham/Grad_Projects/DIG_FW/pnr/DIG_FEEDFWD.enc.dat DIG_FEEDFWD
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView ameba
+setDrawView fplan
+zoomBox 113.878 65.006 113.219 43.614
+windowSelect 113.566 55.058 46.082 49.538
+deselectAll
+zoomBox -11.347 75.537 26.665 60.727
+zoomBox -19.410 93.474 38.842 63.031
+zoomBox -5.423 72.740 77.347 7.083
+zoomBox -8.385 90.841 60.727 35.715
+zoomBox -5.963 81.788 22.451 71.211
+selectObject Module U0_DLF
+deselectAll
+selectObject Module U0_DLF
+deselectAll
+zoomBox -4.570 100.516 120.868 0.207
+zoomBox -8.781 99.261 110.814 19.493
+selectObject Module U0_DLF
+deselectAll
+selectObject Module U0_DLF
+setDrawView ameba
+setDrawView place
+zoomBox 113.225 91.638 48.884 71.311
+deselectAll
+selectInst FILLER_235
+deselectAll
+selectInst FILLER_229
+deselectAll
+selectWire 60.3750 76.3650 60.5750 85.9950 2 {U0_DLF/P_path[3]}
+deselectAll
+selectInst FILLER_216
+deselectAll
+setDrawView ameba
+setDrawView ameba

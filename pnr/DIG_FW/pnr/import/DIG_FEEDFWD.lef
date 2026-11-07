@@ -1,0 +1,374 @@
+#******
+# Preview export LEF
+#
+#	 Preview sub-version 5.10.41.500.3.38
+#
+# TECH LIB NAME: tsmc18
+# TECH FILE NAME: techfile.cds
+#******
+
+VERSION 5.4 ;
+
+NAMESCASESENSITIVE ON ;
+
+DIVIDERCHAR "|" ;
+BUSBITCHARS "[]" ;
+
+UNITS
+    DATABASE MICRONS 100  ;
+END UNITS
+
+MACRO DIG_FEEDFWD
+    CLASS CORE ;
+    FOREIGN ALU_TOP 0 0 ;
+    ORIGIN 0.00 0.00 ;
+    SIZE 92 BY 92 ;
+    SYMMETRY X Y ;
+    PIN SI
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 91.19 0.2 91.39 ;
+        END
+        AntennaGateArea 0.0 ;
+    END SI
+    PIN SE
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 87.16 0.2 87.36 ;
+        END
+        AntennaGateArea 0.0 ;
+    END SE
+    PIN KP[0]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 83.12 0.2 83.32 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KP[0]
+    PIN KP[1]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 79.09 0.2 79.29 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KP[1]
+    PIN KP[2]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 75.05 0.2 75.25 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KP[2]
+    PIN KP[3]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 71.02 0.2 71.22 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KP[3]
+    PIN KI[0]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 66.98 0.2 67.18 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KI[0]
+    PIN KI[1]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 62.95 0.2 63.15 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KI[1]
+    PIN KI[2]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 58.91 0.2 59.11 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KI[2]
+    PIN KI[3]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 54.88 0.2 55.08 ;
+        END
+        AntennaGateArea 0.0 ;
+    END KI[3]
+    PIN REF_CLK
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 50.84 0.2 51.04 ;
+        END
+        AntennaGateArea 0.0 ;
+    END REF_CLK
+    PIN RST
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 46.81 0.2 47.01 ;
+        END
+        AntennaGateArea 0.0 ;
+    END RST
+    PIN scan_clk
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 42.77 0.2 42.97 ;
+        END
+        AntennaGateArea 0.0 ;
+    END scan_clk
+    PIN scan_rst
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 38.74 0.2 38.94 ;
+        END
+        AntennaGateArea 0.0 ;
+    END scan_rst
+    PIN test_mode
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 34.70 0.2 34.90 ;
+        END
+        AntennaGateArea 0.0 ;
+    END test_mode
+    PIN TDC_OUT[0]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 30.67 0.2 30.87 ;
+        END
+        AntennaGateArea 0.0 ;
+    END TDC_OUT[0]
+    PIN TDC_OUT[1]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  0.00 26.63 0.2 26.83 ;
+        END
+        AntennaGateArea 0.0 ;
+    END TDC_OUT[1]
+    PIN TDC_OUT[2]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 22.60 0.2 22.80 ;
+        END
+        AntennaGateArea 0.0 ;
+    END TDC_OUT[2]
+    PIN TDC_OUT[3]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 18.56 0.2 18.76 ;
+        END
+        AntennaGateArea 0.0 ;
+    END TDC_OUT[3]
+    PIN DLF_Ext_Data[0]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 14.53 0.2 14.73 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[0]
+    PIN DLF_Ext_Data[1]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 10.49 0.2 10.69 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[1]
+    PIN DLF_Ext_Data[2]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 6.46 0.2 6.66 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[2]
+    PIN DLF_Ext_Data[3]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 2.42 0.2 2.62 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[3]
+    PIN DLF_Ext_Data[4]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  4.04 0.0 4.24 0.2 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[4]
+    PIN DLF_Ext_Data[5]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  8.07 0.0 8.27 0.2 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[5]
+    PIN DLF_Ext_Data[6]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  12.11 0.0 12.31 0.2 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[6]
+    PIN DLF_Ext_Data[7]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  16.14 0.0 16.34 0.2 ;
+        END
+        AntennaGateArea 0.0 ;
+    END DLF_Ext_Data[7]
+    PIN DLF_Ext_Data[8]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  20.18 0.0 20.38 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[8]
+    PIN DLF_Ext_Data[9]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  24.21 0.0 24.41 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[9]
+    PIN DLF_Ext_Data[10]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  28.25 0.0 28.45 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[10]
+    PIN DLF_Ext_Data[11]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  32.28 0.0 32.48 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[11]
+    PIN DLF_Ext_Data[12]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  36.32 0.0 36.52 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[12]
+    PIN DLF_Ext_Data[13]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  40.35 0.0 40.55 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[13]
+    PIN DLF_Ext_Data[14]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  44.39 0.0 44.59 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_Data[14]
+    PIN DLF_Ext_En
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  48.42 0.0 48.62 0.2 ;
+        END
+        AntennaDiffArea 0.0  ;
+    END DLF_Ext_En
+    PIN OV_FL
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL5 ;
+        RECT  52.46 0.0 52.66 0.2 ;
+        END
+        AntennaDiffArea 0.575 ;
+    END OV_FL
+    PIN SO
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  56.49 0.0 56.69 0.2 ;
+        END
+        AntennaDiffArea 0.575 ;
+    END SO
+    PIN DAC_IN[0]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 87.16 92.00 87.36 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END DAC_IN[0]
+    PIN DAC_IN[1]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 83.12 92.00 83.32 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END DAC_IN[1]
+    PIN DAC_IN[2]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 79.09 92.00 79.29 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END DAC_IN[2]
+    PIN DAC_IN[3]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 75.05 92.00 75.25 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END DAC_IN[3]
+    PIN DAC_IN[4]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 71.02 92.00 71.22 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END DAC_IN[4]
+    PIN UN_FL
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  91.80 54.88 92.00 55.08 ; 
+        END
+        AntennaDiffArea 0.575 ;
+    END UN_FL
+    
+END DIG_FEEDFWD
+
+END LIBRARY

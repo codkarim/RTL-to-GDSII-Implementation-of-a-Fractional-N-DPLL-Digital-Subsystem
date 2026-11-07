@@ -1,0 +1,87 @@
+*----------------------------------------------------------------------------------------
+*	First Encounter 08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+*	
+*
+* 	Date & Time:	2026-Jul-14 06:09:22 (2026-Jul-14 03:09:22 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: DIG_FEEDFWD
+*
+*	Liberty Libraries used: 
+*	        ../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+*
+*	Power Domain used: 
+*		Rail:        VDD 	Voltage:       1.08 
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: N.A.
+*
+*       Clock Gates Enable Activity: N.A.
+*
+*       Primary Input Activity: 0.200000
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile report/power.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:      0.1784      52.67%
+Total Switching Power:     0.1558      46.01%
+Total Leakage Power:     0.004469      1.319%
+Total Power:               0.3387 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                        0.1121      0.0147   0.0009269      0.1278       37.72 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                    0.06625      0.1411    0.003542      0.2109       62.28 
+-----------------------------------------------------------------------------------------
+Total                             0.1784      0.1558    0.004469      0.3387         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                      1.08     0.1784      0.1558    0.004469      0.3387         100 
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+SCAN_CLK                         0.01883     0.03431   0.0002623     0.05341       15.77 
+MASTER_CLK                       0.02003      0.0208   0.0003024     0.04113       12.14 
+-----------------------------------------------------------------------------------------
+Total                            0.03886     0.05511   0.0005647     0.09454       27.91 
+-----------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power:               U0_MASH/U38 (INVX8M): 	   0.01528 
+* 		Highest Leakage Power:        U0_DLF/add_77/U1_6 (ADDFHX2M): 	  6.07e-05 
+* 		Total Cap: 	7.32088e-12 F
+* 		Total instances in design:   346
+* 		Total instances in design with no power:     0
+*          Total instances in design with no activty:     0
+* 		Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

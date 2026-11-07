@@ -1,0 +1,60 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : DIG_FEEDBCK
+Version: K-2015.06
+Date   : Mon Jul 13 11:31:28 2026
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/GRAD_PROJECT/DIG_FB/design_for_test/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+DIG_FEEDBCK            tsmc13_wl20       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+DIG_FEEDBCK                               0.468    0.284 1.66e+07    0.769 100.0
+  U0_LMS (LMS_in_width4_K_width9_err_width20_test_1)
+                                          0.125    0.116 8.74e+06    0.250  32.5
+    add_51 (LMS_in_width4_K_width9_err_width20_DW01_add_0)
+                                       8.59e-03 1.42e-02 1.32e+06 2.41e-02   3.1
+    mult_38 (LMS_in_width4_K_width9_err_width20_DW02_mult_0)
+                                       9.49e-02 6.69e-02 6.74e+06    0.169  21.9
+  U0_CNT_MMD (CNTRL_MMD_FCW_WIDTH27_FRAC_WIDTH20_INT_WIDTH7_CNTRL_WIDTH8_test_1)
+                                       4.77e-02 5.59e-02 8.58e+05    0.104  13.6
+  U0_DCW (CALC_DCW_DCW_WIDTH9_err_width20_K_width9_test_1)
+                                          0.110 4.97e-02 5.61e+06    0.165  21.5
+    mult_15 (CALC_DCW_DCW_WIDTH9_err_width20_K_width9_DW02_mult_0)
+                                       7.61e-02 2.74e-02 5.31e+06    0.109  14.1
+  U0_DSM (DSM_1ST_ORDER_in_width20_test_1)
+                                       3.97e-02 5.90e-02 1.32e+06    0.100  13.0
+    add_29 (DSM_1ST_ORDER_in_width20_DW01_add_0)
+                                       8.73e-03 5.47e-03 5.72e+05 1.48e-02   1.9
+  U0_RST (mux2X1_0)                    1.37e-04 9.66e-05 1.37e+04 2.47e-04   0.0
+  U0_clk (mux2X1_1)                       0.142 2.52e-03 1.34e+04    0.144  18.7
+1
