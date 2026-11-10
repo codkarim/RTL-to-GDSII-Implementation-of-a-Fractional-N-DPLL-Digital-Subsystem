@@ -1,1 +1,1 @@
-# RTL-to-GDSII-Implementation-of-a-Fractional-N-DPLL-Digital-Subsystem
+# RTL-to-GDSII Implementation of Digital Building Blocks for Fractional-N DPLL
