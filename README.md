@@ -16,7 +16,7 @@ Depending on the requirements of the analog side, the paths can be integrated as
 
 ---
 
-## System Architecture
+## DPLL Architecture
 The system operates by converting the phase difference between the reference and feedback signals into a digital value using a Time-to-Digital 
 Converter (TDC). This error is filtered by the Digital Loop Filter (DLF) and generates the Digital Control Word (DCW) that is delivered to the Digital 
 Delta Sigma Modulator (DDSM). The DDSM converts a 14-bit fractional input to a 5-bit integer output that is delivered to the Digitally Controlled 
@@ -26,6 +26,6 @@ correlator reduces spurious tones and enhances overall system performance.
 <img width="1324" height="765" alt="image" src="https://github.com/user-attachments/assets/032f2b86-8b9c-4c3c-b469-78532e24650e" />
 
 For more Details :
-- Read [DPLL Illustation](./Documents/ELKHOLY-DISSERTATION-2016.pdf)
-- Read [Digital Blocks Report](./Documents/RTL-to-GDSII Implementation of Digital Building Blocks for Fractional-N DPLL.pdf) 
+- Read [DPLL Illustation.](./Documents/ELKHOLY-DISSERTATION-2016.pdf)
+- Read [Digital Blocks Report.](./Documents/RTL-to-GDSII-Implementation-of-Digital-Building-Blocks-for-Fractional-N-DPLL.pdf) 
 
